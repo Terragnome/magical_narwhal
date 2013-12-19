@@ -1,12 +1,14 @@
 MagicalNarwhal::Application.routes.draw do
-  get "subscribe" => 'subscribe#index'
-  get "about" => 'about#index'
-  get "contact" => 'contact#index'
-  get "welcome" => 'welcome#index'
+  get 'subscribe' => 'subscribe#index'
+  get 'about' => 'about#index'
+  get 'contact' => 'contact#index'
+  get 'welcome"' => 'welcome#index'
 
-  resources :posts do
+  get 'posts' => 'posts#index'
+  get 'posts/latest' => 'posts#latest'
+  resources :posts do    
     member do
-      get 'index'
+      get '' => 'posts#show'
     end
   end
 

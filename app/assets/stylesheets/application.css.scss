@@ -22,7 +22,7 @@
 .right{ float: right }
 .center{ text-align: center; }
 
-.title{ font-weight: bold; }
+.bold{ font-weight: bold; }
 
 html, body{
 	border: 0px;
@@ -33,20 +33,17 @@ html, body{
 }
 
 div{
-	font-family: Helvetica;
+	font-family: 'Open Sans', Helvetica, sans-serif;
 }
 
 a{
-	color: #ffffff;
-	font-family: Helvetica;
+	color: #f0f0f0;
+	font-family: 'Open Sans', Helvetica, sans-serif;
 	text-decoration: none;
-	&:hover{
-		color: #808080;
-	}
 }
 
 #scene{
-	background-color: #00ff00;
+	background-color: #ffffff;
 	background-image:url('welcome_bg.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -60,11 +57,12 @@ a{
 }
 
 #header{
-	background-color: #000000;
-	color: #ffffff;
-	font-size: 18px;
-	opacity: 0.3;
-	padding: 20px 30px 50px 30px;
+}
+
+#subscribe{
+	font-size: 14px;
+	font-weight: bold;
+	padding: 10px 25px 10px 25px;
 }
 
 #body{
@@ -73,17 +71,22 @@ a{
 }
 
 #footer{
-	background-color: #000000;
+	background-color: rgba(0, 0, 0, 0.3);
 	bottom: 0px;
 	border: 0px;
 	margin: 0px;
-	opacity: 0.3;
-	padding: 30px 0px 50px 0px;
+	padding: 15px 0px 50px 0px;
 	position: absolute;
 	width: 100%;
 	a{
+		color: #808080;
 		display: inline-block;
+		font-size: 13px;
+		font-weight:bold;
+		margin: 0px 15px 0px 15px;
+	}
+	.main{
+		color: #f0f0f0;
 		font-size: 14px;
-		padding: 0px 30px 0px 30px;
 	}
 }
