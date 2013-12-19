@@ -14,3 +14,14 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+	$('#scene').parallax({
+	  calibrateX: true,
+	  calibrateY: true,
+	  invertX: true,
+	  invertY: true,
+	  scalarX: 3,
+	  scalarY: 3,
+	});
+});
