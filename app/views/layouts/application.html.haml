@@ -13,8 +13,8 @@
     #body
       =yield
     #footer.center
-      =link_to('Newest Post', posts_latest_path, :class=>['main'])
+      =link_to('Home', root_path, :class=>['main'])
       =link_to( 'Archive', posts_path)
       =link_to( 'About', about_path)
-      =link_to( 'Forum', about_path)      
+      =link_to( 'Forum', forum_path)      
       =link_to( 'Contact', contact_path)

@@ -1,10 +1,11 @@
 MagicalNarwhal::Application.routes.draw do
+  get "forum" => 'forum#index'
   get 'subscribe' => 'subscribe#index'
-  get 'about' => 'about#index'
-  get 'contact' => 'contact#index'
+
+  get 'about' => 'info#about'
+  get 'contact' => 'info#contact'
 
   get 'posts' => 'posts#index'
-  get 'posts/latest' => 'posts#latest'
   resources :posts do    
     member do
       get '' => 'posts#show'
