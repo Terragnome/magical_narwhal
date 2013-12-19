@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def latest
-    redirect_to post_path(1)
+    render :show
   end
 
   def index
