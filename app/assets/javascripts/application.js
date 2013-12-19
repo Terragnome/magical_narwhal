@@ -14,12 +14,3 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-
-var $scene = $('#scene').parallax();
-$scene.parallax('enable');
-$scene.parallax('disable');
-$scene.parallax('calibrate', false, true);
-$scene.parallax('invert', false, true);
-$scene.parallax('limit', false, 10);
-$scene.parallax('scalar', 2, 8);
-$scene.parallax('friction', 0.2, 0.8);

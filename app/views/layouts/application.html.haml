@@ -8,13 +8,13 @@
 
 %body
   #scene
-    #header{:class=>['layer'], 'data-depth'=>'0.5'}
-      %div.left{:style=>"font-weight:bold;"} Magical Narwhal
-      %div.right
+    #header
+      .left{:style=>"font-weight:bold;"} Magical Narwhal
+      .right
         =link_to('Subscribe', 'http://www.google.com')
-    #body{:class=>['layer'], 'data-depth'=>'1.0'}
+    #body
       =yield
-    #footer.center{:class=>['layer'], 'data-depth'=>'0.5'}
+    #footer.center
       =link_to( 'Musings', 'http://www.google.com')
       =link_to( 'About', 'http://www.yahoo.com')
       =link_to( 'Contact', 'http://news.bbc.co.uk')
