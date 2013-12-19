@@ -1,9 +1,14 @@
 MagicalNarwhal::Application.routes.draw do
-  get "posts" => 'posts#index'
   get "subscribe" => 'subscribe#index'
   get "about" => 'about#index'
   get "contact" => 'contact#index'
   get "welcome" => 'welcome#index'
+
+  resources :posts do
+    member do
+      get 'index'
+    end
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
