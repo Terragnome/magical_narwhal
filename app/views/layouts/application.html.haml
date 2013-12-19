@@ -1,0 +1,20 @@
+!!! html
+%html
+%head
+  %title Magical Narwhal
+  = stylesheet_link_tag    "application", media:"all", "data-turbolinks-track"=>true
+  = javascript_include_tag "application", "data-turbolinks-track"=>true
+  =csrf_meta_tags
+
+%body
+  #scene
+    #header{:class=>['layer'], 'data-depth'=>'0.5'}
+      %div.left{:style=>"font-weight:bold;"} Magical Narwhal
+      %div.right
+        =link_to('Subscribe', 'http://www.google.com')
+    #body{:class=>['layer'], 'data-depth'=>'1.0'}
+      =yield
+    #footer.center{:class=>['layer'], 'data-depth'=>'0.5'}
+      =link_to( 'Musings', 'http://www.google.com')
+      =link_to( 'About', 'http://www.yahoo.com')
+      =link_to( 'Contact', 'http://news.bbc.co.uk')
