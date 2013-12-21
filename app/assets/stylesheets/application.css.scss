@@ -44,7 +44,7 @@ a{
 
 #scene{
 	background-color: #ffffff;
-	background-image:url('welcome_bg.jpg');
+	background-image:url('welcome_bg.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 	border: 0px;
@@ -84,9 +84,12 @@ a{
 		font-size: 13px;
 		font-weight:bold;
 		margin: 0px 15px 0px 15px;
-	}
-	.main{
-		color: #f0f0f0;
-		font-size: 14px;
+		text-align: center;
+		width: 80px;
+
+		&:hover{
+			color: #f0f0f0;
+			font-size: 14px;
+		}
 	}
 }

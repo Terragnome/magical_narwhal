@@ -1,7 +1,7 @@
 !!! html
 %html
 %head
-  %title Magical Narwhal
+  %title Blueprint
   = stylesheet_link_tag    "application", media:"all", "data-turbolinks-track"=>true
   = javascript_include_tag "application", "data-turbolinks-track"=>true
   =csrf_meta_tags
@@ -13,7 +13,7 @@
     #body
       =yield
     #footer.center
-      =link_to('Home', root_path, :class=>['main'])
+      =link_to('Home', root_path)
       =link_to( 'Archive', posts_path)
       =link_to( 'About', about_path)
       =link_to( 'Forum', forum_path)      
