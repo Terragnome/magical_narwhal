@@ -1,7 +1,5 @@
 MagicalNarwhal::Application.routes.draw do
-  get "forum" => 'forum#index'
   get 'subscribe' => 'subscribe#index'
-
   get 'about' => 'info#about'
   get 'contact' => 'info#contact'
 

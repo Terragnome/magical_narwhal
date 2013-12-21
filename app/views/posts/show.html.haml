@@ -1,17 +1,28 @@
-%div
-  %h1
+#post
+  .title
     =@post.title
-  %h2
-    =@post.subtitle
-    =@post.user.alias ? @post.user.alias : @post.user.name
+  .author
+    =@post.display_name
+  -if @post.subtitle
+    .subtitle
+      =@post.subtitle
   %p
     =@post.body
 
--if @post.previous || @post.next
-  %div
-    -if @post.previous
-      .left
-        =link_to("Previous", post_path(@post.previous.id))
-    -if @post.next
-      .right
-        =link_to("Next", post_path(@post.next.id))
+  -if @post.older || @post.newer
+    %div{:style=>"font-size:30px; height:50px;"}
+      -if @post.older
+        .left
+          =link_to("<", post_path(@post.older.id))
+      -if @post.newer
+        .right
+          =link_to(">", post_path(@post.newer.id))
+
+  -if Post.oldest.id != @post.id || Post.newest.id != @post.id
+    %div{:style=>"font-size:30px; height:50px;"}
+      -if Post.oldest.id != @post.id
+        .left
+          =link_to("<<", post_path(Post.oldest.id))
+      -if Post.newest.id != @post.id
+        .right
+          =link_to(">>", post_path(Post.newest.id))

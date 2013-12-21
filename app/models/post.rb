@@ -3,11 +3,23 @@ class Post < ActiveRecord::Base
 
   scope :active, -> {where(active:true)}
   
-  def previous
-    @previous ||= Post.active.where(['id<?', id]).last
+  def self.oldest
+    @@oldest ||= Post.active.first
   end
 
-  def next
-    @next ||= Post.active.where(['id>?', id]).first
+  def self.newest
+    @@newest ||= Post.active.last
+  end
+
+  def older
+    @older ||= Post.active.where(['id<?', id]).last
+  end
+
+  def newer
+    @newer ||= Post.active.where(['id>?', id]).first
+  end
+
+  def display_name
+    user.alias ? user.alias : user.name
   end
 end
