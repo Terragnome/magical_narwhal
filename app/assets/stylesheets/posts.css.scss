@@ -2,20 +2,35 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#post{
-	.title{
-		display: inline-block;
-		font-size: 20px;
-		font-weight: bold;
-		padding: 0px;
+#post{	
+	.header{
+		border: 0px;
+		margin: 0px;
+		padding: 0px 0px 20px 0px;
+
+		.title{
+			border: 0px;
+			display: inline-block;
+			font-size: 20px;
+			font-weight: bold;
+			margin: 0px;
+			padding: 0px;
+		}
+		.author{
+			border: 0px;
+			display: inline-block;
+			margin: 0px;
+			padding: 0px 0px 0px 15px;
+		}
+		.subtitle{
+			border: 0px;
+			color: #f0f0f0;
+			font-size: 14px;
+			margin: 0px;
+			padding: 0px;
+		}
 	}
-	.author{
-		display: inline-block;
-		padding: 0px 0px 0px 20px;
-	}
-	.subtitle{
-		color: #808080;
-		font-size: 12px;
-		padding: 0px;
+	
+	.body{
 	}
 }

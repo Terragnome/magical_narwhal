@@ -1,12 +1,13 @@
 #post
-  .title
-    =@post.title
-  .author
-    =@post.display_name
-  -if @post.subtitle
-    .subtitle
-      =@post.subtitle
-  %p
+  .header
+    .title
+      =@post.title
+    .author
+      =@post.display_name
+    -if @post.subtitle
+      .subtitle
+        =@post.subtitle
+  .body
     =@post.body
 
   -if @post.older || @post.newer
