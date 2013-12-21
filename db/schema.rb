@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131221044057) do
+ActiveRecord::Schema.define(version: 20131221071209) do
 
   create_table "posts", force: true do |t|
     t.integer  "user_id",                    null: false
@@ -36,8 +36,8 @@ ActiveRecord::Schema.define(version: 20131221044057) do
     t.datetime "last_login_at"
   end
 
-  add_index "users", ["alias"], name: "index_users_on_alias", using: :btree
-  add_index "users", ["email"], name: "index_users_on_email", using: :btree
-  add_index "users", ["name"], name: "index_users_on_name", using: :btree
+  add_index "users", ["alias"], name: "index_users_on_alias", unique: true, using: :btree
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["name"], name: "index_users_on_name", unique: true, using: :btree
 
 end
