@@ -8,7 +8,7 @@
       .subtitle
         =@post.subtitle
   .body
-    =@post.body
+    =@post.body.html_safe
 
   -if @post.older || @post.newer
     %div{:style=>"font-size:30px; height:50px;"}
