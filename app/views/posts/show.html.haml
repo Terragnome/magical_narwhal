@@ -1,2 +1,17 @@
-%h1 Posts#show
-%p Find me in app/views/posts/show.html.haml
+%div
+  %h1
+    =@post.title
+  %h2
+    =@post.subtitle
+    =@post.user.alias ? @post.user.alias : @post.user.name
+  %p
+    =@post.body
+
+-if @post.previous || @post.next
+  %div
+    -if @post.previous
+      .left
+        =link_to("Previous", post_path(@post.previous.id))
+    -if @post.next
+      .right
+        =link_to("Next", post_path(@post.next.id))

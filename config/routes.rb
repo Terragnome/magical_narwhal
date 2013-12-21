@@ -5,6 +5,7 @@ MagicalNarwhal::Application.routes.draw do
   get 'about' => 'info#about'
   get 'contact' => 'info#contact'
 
+  get 'latest' => 'posts#latest'
   get 'posts' => 'posts#index'
   resources :posts do    
     member do

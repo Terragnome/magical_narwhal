@@ -11,18 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131221032037) do
+ActiveRecord::Schema.define(version: 20131221044057) do
 
   create_table "posts", force: true do |t|
-    t.integer  "user_id",    null: false
-    t.string   "title",      null: false
-    t.text     "body",       null: false
+    t.integer  "user_id",                    null: false
+    t.string   "title",                      null: false
+    t.text     "body",                       null: false
+    t.boolean  "active",     default: false, null: false
     t.datetime "created_at"
     t.datetime "posted_at"
-    t.boolean  "active"
+    t.string   "subtitle"
   end
 
-  add_index "posts", ["created_at", "active"], name: "index_posts_on_created_at_and_active", using: :btree
+  add_index "posts", ["active"], name: "index_posts_on_active", using: :btree
+  add_index "posts", ["created_at"], name: "index_posts_on_created_at", using: :btree
   add_index "posts", ["title"], name: "index_posts_on_title", using: :btree
   add_index "posts", ["user_id"], name: "index_posts_on_user_id", using: :btree
 
