@@ -1,10 +1,8 @@
 =render partial: "post"
 
 -if @post.older || @post.newer
-  %div{:style=>"font-size:18px; font-weight:bold;"}
+  #navigation
     -if @post.older
-      .left
-        =link_to("Previous", post_path(@post.older.id))
+      =link_to("Previous", post_path(@post.older.id))
     -if @post.newer
-      .left{:style=>"margin:0px 0px 0px 20px;"}
-        =link_to("Next", post_path(@post.newer.id))
+      =link_to("Next", post_path(@post.newer.id))

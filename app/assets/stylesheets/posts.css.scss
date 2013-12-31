@@ -2,14 +2,28 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#navigation{
+	a{
+		font-weight: bold;
+		font-size: 18px;
+		margin: 0px 20px 0px 0px;
+	}
+}
+
 #post{
-	padding: 0px 0px 10px 0px;
+	padding: 0px 0px 15px 0px;
 
 	.header{
 		border: 0px;
 		margin: 0px;
 		margin: 0px 0px 0px 0px;
 
+		.icon{
+			float: left;
+			height: 50px;
+			margin: 0px 7px 0px 0px;
+			width: 50px;
+		}
 		.title{
 			border: 0px;
 			display: inline-block;
@@ -25,7 +39,7 @@
 
 			.info{
 				display: inline-block;
-				margin: 0px 15px 0px 0px;
+				margin: 0px 10px 0px 0px;
 
 				img{
 					float: left;
@@ -47,6 +61,6 @@
 		}
 	}
 	.body{
-		padding: 20px;
+		padding: 10px 20px 10px 20px;
 	}
 }

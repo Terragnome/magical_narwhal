@@ -1,14 +1,16 @@
 #post
   .header
+    -if @post.user.icon
+      %img{:src=>'/assets/mlin_avatar.jpg', :class=>'icon'}
     .title
       =@post.title
     .author
       .info
-        %img{:src=>'/assets/envelope.png', :class=>'icon'}
+        %img{:src=>'/assets/icons/envelope.png'}
         .text
           =mail_to(@post.user.email, @post.display_author)
       .info
-        %img{:src=>'/assets/calendar.png', :class=>'icon'}
+        %img{:src=>'/assets/icons/calendar.png'}
         .text
           =@post.display_time
     -if @post.subtitle

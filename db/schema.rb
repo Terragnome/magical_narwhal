@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131221071209) do
+ActiveRecord::Schema.define(version: 20131231205040) do
 
   create_table "posts", force: true do |t|
     t.integer  "user_id",                    null: false
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20131221071209) do
     t.string   "alias"
     t.datetime "created_at"
     t.datetime "last_login_at"
+    t.string   "icon"
   end
 
   add_index "users", ["alias"], name: "index_users_on_alias", unique: true, using: :btree
