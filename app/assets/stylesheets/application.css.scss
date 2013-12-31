@@ -12,20 +12,6 @@
  *= require_tree .
  */
 
-.black{ background-color: #000000; }
-.white{ background-color: #ffffff; }
-.red{ background-color: #ff0000; }
-.blue{ background-color: #0000ff; }
-.green{ background-color: #00ff00; }
-
-.left{ float: left; }
-.right{ float: right }
-.center{ text-align: center; }
-
-.bold{ font-weight: bold; }
-
-.inline{ display: inline-block; }
-
 html, body{
 	border: 0px;
 	height: 100%;
@@ -40,9 +26,12 @@ div{
 }
 
 a{
-	color: #f0f0f0;
+	color: #ff0000;
 	font-family: 'Open Sans', Helvetica, sans-serif;
 	text-decoration: none;
+	&:hover{
+		color: #f0f0f0;
+	}		
 }
 
 img{
@@ -51,6 +40,17 @@ img{
 	margin: 0px;
 	padding: 0px;
 }
+
+.black{ background-color: #000000; }
+.white{ background-color: #ffffff; }
+.red{ background-color: #ff0000; }
+.blue{ background-color: #0000ff; }
+.green{ background-color: #00ff00; }
+
+.left{ float: left; }
+.right{ float: right }
+.bold{ font-weight: bold; }
+.inline{ display: inline-block; }
 
 #scene{
 	background-color: #ffffff;
@@ -68,39 +68,35 @@ img{
 }
 
 #header{
-}
+	background-color: rgba(0, 0, 0, 0.25);
+	bottom: 0px;
+	border: 0px;
+	margin: 0px;
+	width: 100%;
+	.links{
+		display: inline-block;
+		padding: 15px 0px 50px;
+		a{
+			display: inline-block;
+			font-size: 15px;
+			font-weight:bold;
+			margin: 0px 10px;
 
-#subscribe{
-	font-size: 14px;
-	font-weight: bold;
-	padding: 10px 25px 10px 25px;
+			&:hover{
+				font-size: 14px;
+			}
+		}
+	}	
+	.subscribe{
+		margin: 5px;
+		img{
+			height: 20px;
+			width: 20px;
+		}
+	}
 }
 
 #body{
 	font-size: 14px;
 	padding: 15px 40px 15px 30px;
-}
-
-#footer{
-	background-color: rgba(0, 0, 0, 0.25);
-	bottom: 0px;
-	border: 0px;
-	margin: 0px;
-	padding: 15px 0px 50px 0px;
-	position: absolute;
-	width: 100%;
-	a{
-		color: #808080;
-		display: inline-block;
-		font-size: 13px;
-		font-weight:bold;
-		margin: 0px 15px 0px 15px;
-		text-align: center;
-		width: 80px;
-
-		&:hover{
-			color: #f0f0f0;
-			font-size: 14px;
-		}
-	}
 }

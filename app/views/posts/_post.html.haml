@@ -1,16 +1,26 @@
 #post
   .header
     -if @post.user.icon
-      %img{:src=>'/assets/mlin_avatar.jpg', :class=>'icon'}
+      =image_tag('/assets/mlin_avatar.jpg', :class=>'icon')
     .title
       =@post.title
     .author
-      .info
-        %img{:src=>'/assets/icons/envelope.png'}
-        .text
-          =mail_to(@post.user.email, @post.display_author)
-      .info
-        %img{:src=>'/assets/icons/calendar.png'}
+      -if @post.user.email
+        .info
+          =image_tag('/assets/icons/envelope.png')
+          .text
+            =mail_to(@post.user.email, @post.user.display_name)
+      -else
+        .info
+          .text
+            =@post.user.display_name
+      -if @post.user.twitter_id
+        .info
+          =image_tag('/assets/icons/twitter.png')
+          .text
+            =link_to("@#{@post.user.display_name}", "http://twitter.com/#{@post.user.display_name}")
+      .info.text
+        =image_tag('/assets/icons/calendar.png')
         .text
           =@post.display_time
     -if @post.subtitle

@@ -22,10 +22,6 @@ class Post < ActiveRecord::Base
   def date
     created_at.to_date
   end
-
-  def display_author
-    user.display_name
-  end
   
   def display_time
     date.strftime("%a, %m/%d/%y")

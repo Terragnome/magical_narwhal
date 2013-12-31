@@ -7,13 +7,16 @@
   =csrf_meta_tags
 
 %body
+  #header
+    .links
+      =link_to('Home', root_path)
+      =link_to('Archive', posts_path)
+      =link_to('About', about_path)
+    .subscribe.right
+      =link_to image_tag('/assets/icons/rss.png'), "http://www.google.com"
+      =link_to image_tag('/assets/icons/facebook.png'), "http://www.facebook.com"
+      =link_to image_tag('/assets/icons/twitter.png'), "http://www.twitter.com"
+    
   #scene
-    #subscribe.right
-      =link_to('Subscribe', subscribe_path)
     #body
       =yield
-    #footer.center
-      =link_to('Home', root_path)
-      =link_to( 'Archive', posts_path)
-      =link_to( 'About', about_path)  
-      =link_to( 'Contact', contact_path)
