@@ -75,7 +75,7 @@ img{
 	border: 0px;
 	margin: 0px;
 	.links{
-		display: inline-block;
+		float: left;
 		margin: 10px;
 		min-height: 50px;
 		a{
@@ -83,13 +83,10 @@ img{
 			font-size: 15px;
 			font-weight:bold;
 			margin: 0px 5px;
-
-			&:hover{
-				font-size: 14px;
-			}
 		}
 	}	
 	.subscribe{
+		float: right;
 		margin: 5px;
 		img{
 			height: 20px;

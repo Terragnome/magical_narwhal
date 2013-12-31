@@ -19,7 +19,7 @@
           =image_tag('/assets/icons/twitter.png')
           .text
             =link_to("@#{@post.user.display_name}", "http://twitter.com/#{@post.user.display_name}")
-      .info.text
+      .info
         =image_tag('/assets/icons/calendar.png')
         .text
           =@post.display_time
