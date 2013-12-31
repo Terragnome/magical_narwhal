@@ -1,0 +1,18 @@
+#post
+  .header
+    .title
+      =@post.title
+    .author
+      .info
+        %img{:src=>'/assets/envelope.png', :class=>'icon'}
+        .text
+          =mail_to(@post.user.email, @post.display_author)
+      .info
+        %img{:src=>'/assets/calendar.png', :class=>'icon'}
+        .text
+          =@post.display_time
+    -if @post.subtitle
+      .subtitle
+        =@post.subtitle
+  .body
+    =@post.body.html_safe

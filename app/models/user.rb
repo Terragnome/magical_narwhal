@@ -12,4 +12,8 @@ class User < ActiveRecord::Base
   
   validates_presence_of :name
   validates :name, length:{minimum: 3}
+
+  def display_name
+    self.alias ? self.alias : self.name
+  end
 end

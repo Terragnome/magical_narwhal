@@ -19,7 +19,15 @@ class Post < ActiveRecord::Base
     @newer ||= Post.active.where(['id>?', id]).first
   end
 
-  def display_name
-    user.alias ? user.alias : user.name
+  def date
+    created_at.to_date
+  end
+
+  def display_author
+    user.display_name
+  end
+  
+  def display_time
+    date.strftime("%a, %m/%d/%y")
   end
 end

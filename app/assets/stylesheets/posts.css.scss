@@ -2,11 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#post{	
+#post{
+	padding: 0px 0px 10px 0px;
+
 	.header{
 		border: 0px;
 		margin: 0px;
-		padding: 0px 0px 20px 0px;
+		margin: 0px 0px 0px 0px;
 
 		.title{
 			border: 0px;
@@ -18,9 +20,23 @@
 		}
 		.author{
 			border: 0px;
-			display: inline-block;
 			margin: 0px;
-			padding: 0px 0px 0px 15px;
+			padding: 0px 0px 0px 0px;
+
+			.info{
+				display: inline-block;
+				margin: 0px 15px 0px 0px;
+
+				img{
+					float: left;
+					height: 30px;
+					width: 30px;
+				}
+				.text{
+					display: inline-block;
+					margin: 6px 0px 0px 0px;
+				}
+			}
 		}
 		.subtitle{
 			border: 0px;
@@ -30,7 +46,7 @@
 			padding: 0px;
 		}
 	}
-	
 	.body{
+		padding: 20px;
 	}
 }

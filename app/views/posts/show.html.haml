@@ -1,29 +1,10 @@
-#post
-  .header
-    .title
-      =@post.title
-    .author
-      =@post.display_name
-    -if @post.subtitle
-      .subtitle
-        =@post.subtitle
-  .body
-    =@post.body.html_safe
+=render partial: "post"
 
-  -if @post.older || @post.newer
-    %div{:style=>"font-size:30px; height:50px;"}
-      -if @post.older
-        .left
-          =link_to("<", post_path(@post.older.id))
-      -if @post.newer
-        .right
-          =link_to(">", post_path(@post.newer.id))
-
-  -if Post.oldest.id != @post.id || Post.newest.id != @post.id
-    %div{:style=>"font-size:30px; height:50px;"}
-      -if Post.oldest.id != @post.id
-        .left
-          =link_to("<<", post_path(Post.oldest.id))
-      -if Post.newest.id != @post.id
-        .right
-          =link_to(">>", post_path(Post.newest.id))
+-if @post.older || @post.newer
+  %div{:style=>"font-size:18px; font-weight:bold;"}
+    -if @post.older
+      .left
+        =link_to("Previous", post_path(@post.older.id))
+    -if @post.newer
+      .left{:style=>"margin:0px 0px 0px 20px;"}
+        =link_to("Next", post_path(@post.newer.id))
