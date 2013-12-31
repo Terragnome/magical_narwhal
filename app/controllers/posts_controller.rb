@@ -20,8 +20,8 @@ class PostsController < ApplicationController
     end
 
     respond_to do |format|
-      format.html { render action: :show }
-      format.js {}
+      format.html{ render action: :show }
+      format.js{}
     end
   end
 end
