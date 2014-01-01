@@ -13,7 +13,7 @@
 		.icon{
 			float: left;
 			height: 50px;
-			margin: 0px 7px;
+			margin: 0px 7px 0px 0px;
 			width: 50px;
 		}
 		.title{
@@ -30,16 +30,16 @@
 			padding: 0px;
 			.info{
 				display: inline-block;
-				margin: 0px 3px;
+				margin: 0px 3px 0px 0px;
 				img{
 					float: left;
 					height: 23px;
-					margin: 0px 3px;
+					margin: 0px 3px 0px 0px;
 					width: 23px;
 				}
 				.text{
 					display: inline-block;
-					margin: 3px 0px;
+					margin: 3px 0px 0px 0px;
 				}
 			}
 		}
@@ -53,7 +53,7 @@
 	}
 	.body{
 		font-size: 14px;
-		padding: 0px 20px 0px 20px;
+		padding: 0px 10px 0px 10px;
 	}
 }
 
