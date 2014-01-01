@@ -13,6 +13,9 @@
  */
 
 html, body{
+	//background-image:url('backgrounds/welcome_bg.png');
+	background-repeat: no-repeat;
+	background-size: cover;
 	border: 0px;
 	height: 100%;
 	margin: 0px;
@@ -65,20 +68,22 @@ img{
 	background-color: #000000;
 	bottom: 0px;
 	border: 0px;
-	height: 150px;
+	height: 100px;
 	margin: 0px;
 	width: 100%;
 	.links{
+		display: inline-block;
 		float: left;
 		margin: 10px;
 		a{
 			display: inline-block;
-			font-size: 40px;
+			font-size: 30px;
 			font-weight:bold;
 			margin: 0px 5px;
 		}
 	}	
 	.subscribe{
+		display: inline-block;
 		float: right;
 		margin: 5px;
 		img{
@@ -88,16 +93,20 @@ img{
 	}
 }
 
+#footer{
+	background-color: #000000;
+	bottom: 0px;
+	border: 0px;
+	margin: 0px;
+	width: 100%;
+}
+
 #scene{
-	background-color: #f9f9f9;
-	background-image:url('backgrounds/welcome_bg.png');
-	background-repeat: no-repeat;
-	background-size: cover;
 	border: 0px;
 	color: #000000;
-	height: calc(100% - 150px);
-	height: -moz-calc(100% - 150px);
-	height: -webkit-calc(100% - 150px);
+	height: calc(100% - 130px);
+	height: -moz-calc(100% - 130px);
+	height: -webkit-calc(100% - 130px);
 	margin: 0px;
 	overflow: scroll;
 	padding: 0px 100px 0px 100px;
