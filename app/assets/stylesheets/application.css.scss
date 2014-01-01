@@ -18,6 +18,15 @@ html, body{
 	margin: 0px;
 	padding: 0px;
 	width: 100%;
+	
+	::selection{
+		background-color: #ff0000;
+		color: #ffffff;
+	}
+	::-moz-selection{
+		background-color: #990000;
+		color: #ffffff;
+	}
 }
 
 div{
@@ -30,7 +39,7 @@ a{
 	font-family: 'Open Sans', Helvetica, sans-serif;
 	text-decoration: none;
 	&:hover{
-		color: #f0f0f0;
+		color: #990000;
 	}		
 }
 
@@ -52,35 +61,19 @@ img{
 .bold{ font-weight: bold; }
 .inline{ display: inline-block; }
 
-#scene{
-	background-color: #000000;
-	/*
-	background-image:url('backgrounds/welcome_bg.png');
-	background-repeat: no-repeat;
-	background-size: cover;
-	*/
-	border: 0px;
-	color: #ffffff;
-	height: 100%;
-	margin: 0px;
-	overflow: scroll;
-	padding: 0px;
-	position: relative;
-	width: 100%;
-}
-
 #header{
-	background-color: #ffffff;
+	background-color: #000000;
 	bottom: 0px;
 	border: 0px;
+	height: 150px;
 	margin: 0px;
+	width: 100%;
 	.links{
 		float: left;
 		margin: 10px;
-		min-height: 50px;
 		a{
 			display: inline-block;
-			font-size: 15px;
+			font-size: 40px;
 			font-weight:bold;
 			margin: 0px 5px;
 		}
@@ -95,7 +88,18 @@ img{
 	}
 }
 
-#body{
-	font-size: 14px;
-	padding: 15px 40px 15px 30px;
+#scene{
+	background-color: #f9f9f9;
+	background-image:url('backgrounds/welcome_bg.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	border: 0px;
+	color: #000000;
+	height: calc(100% - 150px);
+	height: -moz-calc(100% - 150px);
+	height: -webkit-calc(100% - 150px);
+	margin: 0px;
+	overflow: scroll;
+	padding: 0px 100px 0px 100px;
+	position: relative;
 }
