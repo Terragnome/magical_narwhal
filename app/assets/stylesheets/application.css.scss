@@ -151,7 +151,6 @@ table{
 		font-family: 'Stalemate';
 		font-size: 75px;
 		margin: 0px 10px 0px 10px;
-		position: fixed;
 		text-shadow:
 			1px 1px 3px #0099cc,
 			1px 1px 3px #0099cc,
@@ -161,6 +160,7 @@ table{
 		z-index: 2;
 	}
 	.links{
+		top: 0px;
 		right: 0px;
 		margin: 10px 25px 10px 25px;
 		position: fixed;
@@ -189,7 +189,7 @@ table{
 	min-width: 500px;
 	z-index: 1;
 	.offset{
-		padding: 50px 0px 50px 0px;
+		padding: 60px 0px 0px 0px;
 	}
 }
 
