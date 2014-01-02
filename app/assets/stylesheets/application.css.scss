@@ -13,23 +13,28 @@
  */
 
 @font-face{
-	font-family: Stalemate;
-	src: url('/fonts/stalemate.regular.ttf');
+	font-family: 'Lato';
+	src: url('/fonts/lato/Lato-Reg.ttf');
 }
 
 @font-face{
-	font-family: Rosario;
-	src: url('/fonts/rosario/Rosario-Regular.otf');
+	font-family: 'LeagueGothic';
+	src: url('/fonts/League-Gothic/LeagueGothic-Regular.otf');
 }
 
 @font-face{
-	font-family: Oswald;
+	font-family: 'Oswald';
 	src: url('/fonts/oswald/Oswald-Regular.otf');
 }
 
 @font-face{
-	font-family: LeagueGothic;
-	src: url('/fonts/League-Gothic/LeagueGothic-Regular.otf');
+	font-family: 'Rosario';
+	src: url('/fonts/rosario/Rosario-Regular.otf');
+}
+
+@font-face{
+	font-family: 'Stalemate';
+	src: url('/fonts/stalemate.regular.ttf');
 }
 
 html, body{
@@ -37,7 +42,7 @@ html, body{
 	background-repeat: no-repeat;
 	background-size: cover;
 	border: 0px;
-	font-family: 'Rosario', Helvetica, sans-serif;
+	font-family: 'Rosario';
 	height: 100%;
 	margin: 0px;
 	padding: 0px;
@@ -51,6 +56,13 @@ html, body{
 		background-color: #0099cc;
 		color: #ffffff;
 	}
+}
+
+p{
+	border: 0px;
+	font-family: 'Rosario';
+	margin: 0px;
+	padding: 0px;
 }
 
 div{
