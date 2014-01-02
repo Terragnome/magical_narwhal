@@ -3,6 +3,6 @@
 -if @post.older || @post.newer
   #navigation
     -if @post.older
-      =link_to("Previous", post_path(@post.older.id))
+      =link_to("PREVIOUS", post_path(@post.older.id))
     -if @post.newer
-      =link_to("Next", post_path(@post.newer.id))
+      =link_to("NEXT", post_path(@post.newer.id))

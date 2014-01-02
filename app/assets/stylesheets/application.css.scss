@@ -12,11 +12,32 @@
  *= require_tree .
  */
 
+@font-face{
+	font-family: Stalemate;
+	src: url('/fonts/stalemate.regular.ttf');
+}
+
+@font-face{
+	font-family: Rosario;
+	src: url('/fonts/rosario/Rosario-Regular.otf');
+}
+
+@font-face{
+	font-family: Oswald;
+	src: url('/fonts/oswald/Oswald-Regular.otf');
+}
+
+@font-face{
+	font-family: LeagueGothic;
+	src: url('/fonts/League-Gothic/LeagueGothic-Regular.otf');
+}
+
 html, body{
 	//background-image:url('backgrounds/gradient3.jpeg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	border: 0px;
+	font-family: 'Rosario', Helvetica, sans-serif;
 	height: 100%;
 	margin: 0px;
 	padding: 0px;
@@ -35,14 +56,13 @@ html, body{
 div{
 	border: 0px;
 	cursor: default;
-	font-family: 'Open Sans', Helvetica, sans-serif;
 	margin: 0px;
 	padding: 0px;
 }
 
 a{
 	color: #0099cc;
-	font-family: 'Open Sans', Helvetica, sans-serif;
+	font-family: 'LeagueGothic';
 	text-decoration: none;
 	&:hover{
 		color: #006699;
@@ -69,11 +89,12 @@ img{
 
 #header{
 	background-color: #0099cc;
-	height: 120px;
+	height: 100px;
 	width: 100%;
 	.logo{
 		display: inline-block;
 		float: left;
+		margin: 10px;
 	}
 	.links{
 		display: inline-block;
@@ -82,7 +103,7 @@ img{
 		a{
 			color: #ffffff;
 			display: inline-block;
-			font-size: 18px;
+			font-size: 28px;
 			font-weight: bold;
 			margin: 0px 0px 0px 30px;
 		}
@@ -91,9 +112,9 @@ img{
 
 #scene{
 	color: #000000;
-	height: calc(100% - 120px);
-	height: -moz-calc(100% - 120px);
-	height: -webkit-calc(100% - 120px);
+	height: calc(100% - 100px);
+	height: -moz-calc(100% - 100px);
+	height: -webkit-calc(100% - 100px);
 	overflow: scroll;
 	padding: 0px 180px 0px 180px;
 	position: relative;
