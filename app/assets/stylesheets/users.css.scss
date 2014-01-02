@@ -1,0 +1,32 @@
+// Place all the styles related to the info controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.user{
+	.icon{
+		float: left;
+		margin: 0px 20px 0px 0px;
+	}
+	.name{
+		font-family: 'Oswald';
+		font-size: 40px;
+	}
+	.info{
+		display: inline-block;
+		height: 30px;
+		margin: 0px 20px 0px 0px;
+		img{
+			float: left;
+			height: 28px;
+			width: 28px;
+			margin: 0px 5px 0px 0px;
+		}
+		.text{
+			display: inline-block;
+			font-family: 'Rosario';
+			font-size: 22px;
+		}
+	}
+	.profile{
+	}
+}

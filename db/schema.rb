@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131231215753) do
+ActiveRecord::Schema.define(version: 20140102171228) do
 
   create_table "posts", force: true do |t|
     t.integer  "user_id",                    null: false
@@ -31,15 +31,16 @@ ActiveRecord::Schema.define(version: 20131231215753) do
   create_table "users", force: true do |t|
     t.string   "name",          null: false
     t.string   "email",         null: false
-    t.string   "alias"
+    t.string   "nickname"
     t.datetime "created_at"
     t.datetime "last_login_at"
     t.string   "icon"
     t.string   "twitter_id"
+    t.text     "profile"
   end
 
-  add_index "users", ["alias"], name: "index_users_on_alias", unique: true, using: :btree
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["name"], name: "index_users_on_name", unique: true, using: :btree
+  add_index "users", ["nickname"], name: "index_users_on_nickname", unique: true, using: :btree
 
 end

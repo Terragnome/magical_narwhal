@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   
   has_many :posts, dependent: :destroy
 
-  validates :alias, length:{minimum: 3}
+  validates :nickname, length:{minimum: 3}
 
   validates_presence_of :email
   validates :email, length:{minimum: 3}
@@ -14,6 +14,6 @@ class User < ActiveRecord::Base
   validates :name, length:{minimum: 3}
 
   def display_name
-    self.alias ? self.alias : self.name
+    self.nickname ? self.nickname : self.name
   end
 end

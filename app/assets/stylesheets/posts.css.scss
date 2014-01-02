@@ -13,15 +13,12 @@
 			width: 64px;
 		}
 		.title{
-			display: inline-block;
 			font-size: 32px;
-			font-weight: bold;
-			margin: -4px 0px 0px 0px;
 		}
-		.author{
+		.info_section{
 			.info{
 				display: inline-block;
-				margin: -4px 11px 0px 0px;
+				margin: -6px 11px 0px 0px;
 				img{
 					float: left;
 					height: 24px;
@@ -30,7 +27,7 @@
 				.text{
 					display: inline-block;
 					font-family: 'Rosario';
-					font-size: 16px;
+					font-size: 17px;
 				}
 			}
 		}
@@ -41,7 +38,7 @@
 	}
 	.body{
 		font-size: 13px;
-		padding: 0px 10px 40px 10px;
+		padding: 0px 0px 40px 0px;
 	}
 }
 

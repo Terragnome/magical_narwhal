@@ -1,10 +1,5 @@
 class InfoController < ApplicationController
-  before_filter :get_user
-  
-  def get_user
-    @user=User.first
-  end
-  
   def about
+    @user=User.first
   end
 end

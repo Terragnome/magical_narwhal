@@ -1,0 +1,17 @@
+.user
+  -if user.icon
+    =image_tag(user.icon, :class=>'icon')
+  .name
+    =user.name.upcase
+  -if user.email
+    .info
+      =image_tag('/assets/icons/envelope.png')
+      .text
+        =mail_to(user.email, user.display_name)
+  -if user.twitter_id
+    .info
+      =image_tag('/assets/icons/twitter.png')
+      .text
+        =link_to("@#{user.twitter_id}", "http://twitter.com/#{user.twitter_id}")
+  .profile
+    =user.profile
