@@ -5,9 +5,9 @@ MagicalNarwhal::Application.routes.draw do
   get 'feed' => 'subscribe#feed'
 
   get 'latest' => 'posts#latest'
-  get ':id' => 'posts#show', :as=>'post'
   resources :posts
 
+  #get 'contributors' => 'users#index'
   resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.
