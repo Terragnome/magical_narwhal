@@ -104,8 +104,12 @@ img{
 	height: 100px;
 	width: 100%;
 	.logo{
+		color: #ffffff;
 		display: inline-block;
 		float: left;
+		font-family: 'Stalemate';
+		font-size: 80px;
+		font-weight: bold;
 		margin: 10px;
 	}
 	.links{
@@ -128,7 +132,7 @@ img{
 	height: -moz-calc(100% - 100px);
 	height: -webkit-calc(100% - 100px);
 	overflow: scroll;
-	padding: 0px 180px 0px 180px;
+	padding: 0px 180px 0px 10px;
 	position: relative;
 }
 
