@@ -6,7 +6,8 @@ class PostsController < ApplicationController
 
   def index_by_user
     logger.debug "TRACE #{params}"
-    @posts=Post.where(:active=>true).reverse
+    user=User.find_by_nickname(params[:nickname])
+    @posts=Post.where(:user_id=>user.id, :active=>true).reverse
   end
 
   def index
