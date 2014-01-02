@@ -3,15 +3,12 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .index{
-	font-size: 22px;
-
 	table{
 		font-family: 'Oswald';
-		tr{
-			padding: 0px 10px 0px 10px;
-		}
-		td{
-			padding: 0px 10px 0px 10px;
+		font-size: 20px;
+		margin: 0 auto;
+		td, th, tr{
+			padding: 0px 30px 0px 30px;
 		}
 	}
 }
@@ -22,24 +19,21 @@
 		.icon{
 			float: left;
 			height: 64px;
-			margin: 6px 10px 6px 0px;
+			margin: 6px 12px 6px 0px;
 			width: 64px;
 		}
 		.info{
 			display: inline-block;
-			margin: 0px 11px 0px 0px;
+			margin: 0px 15px 0px 0px;
 			img{
 				float: left;
 				height: 20px;
 				width: 20px;
-				margin: 0px 3px 0px 0px;
-			}
-			a{
-				font-size: 18px;
+				margin: 0px 2px 0px 0px;
 			}
 			.text{
 				display: inline-block;
-				font-family: 'Oswald';
+				font-family: 'Lato';
 				font-size: 14px;
 			}
 		}

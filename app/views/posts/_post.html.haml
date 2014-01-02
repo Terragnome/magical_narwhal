@@ -1,7 +1,7 @@
 .post
   .header
     -if post.user.icon
-      =image_tag(post.user.icon, :class=>'icon')
+      =link_to image_tag(post.user.icon, :class=>'icon'), user_path(post.user.nickname)
     %h1
       =post.title.upcase
     %div

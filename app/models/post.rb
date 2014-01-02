@@ -24,6 +24,6 @@ class Post < ActiveRecord::Base
   end
   
   def display_time
-    date.strftime("%a, %m/%d/%y")
+    date.strftime("%A, %m/%d/%y")
   end
 end
