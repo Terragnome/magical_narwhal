@@ -69,7 +69,7 @@ img{
 
 #header{
 	background-color: #0099cc;
-	height: 80px;
+	height: 75px;
 	width: 100%;
 	.logo{
 		display: inline-block;
@@ -78,22 +78,22 @@ img{
 	.links{
 		display: inline-block;
 		float: right;
-		margin: 10px;
+		margin: 10px 25px 10px 25px;
 		a{
 			color: #ffffff;
 			display: inline-block;
 			font-size: 18px;
 			font-weight: bold;
-			margin: 0px 20px 0px 0px;
+			margin: 0px 0px 0px 30px;
 		}
 	}
 }
 
 #scene{
 	color: #000000;
-	height: calc(100% - 80px);
-	height: -moz-calc(100% - 80px);
-	height: -webkit-calc(100% - 80px);
+	height: calc(100% - 75px);
+	height: -moz-calc(100% - 75px);
+	height: -webkit-calc(100% - 75px);
 	overflow: scroll;
 	padding: 0px 110px 0px 110px;
 	position: relative;

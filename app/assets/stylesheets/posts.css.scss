@@ -4,29 +4,30 @@
 
 .post{
 	border-bottom: 1px solid #808080;
-	padding: 50px 0px 80px 0px;
+	padding: 50px 0px 65px 0px;
 	.header{
+		margin: 0px 0px 10px 0px;
 		.icon{
 			float: left;
-			height: 50px;
+			height: 64px;
 			margin: 0px 7px 0px 0px;
-			width: 50px;
+			width: 64px;
 		}
 		.title{
 			display: inline-block;
-			font-size: 20px;
+			font-size: 28px;
 			font-weight: bold;
+			//margin: 2px 0px 0px 0px;
 		}
 		.author{
-			padding: 0px 0px 5px 0px;
+			margin: 5px 0px 0px 0px;
 			.info{
 				display: inline-block;
-				margin: 0px 3px 0px 0px;
+				margin: 0px 8px 0px 0px;
 				img{
 					float: left;
-					height: 23px;
-					margin: 0px 3px 0px 0px;
-					width: 23px;
+					height: 24px;
+					width: 24px;
 				}
 				.text{
 					display: inline-block;
@@ -46,11 +47,11 @@
 }
 
 #navigation{
-	height: 120px;
-	padding: 15px 0px;
+	height: 100px;
+	padding: 15px 0px 0px 0px;
 	a{
 		font-weight: bold;
-		font-size: 28px;
+		font-size: 26px;
 		margin: 0px 10px 0px 0px;
 	}
 }
