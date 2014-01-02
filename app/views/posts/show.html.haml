@@ -1,4 +1,5 @@
-=render partial:'post', object:@post
+%div{:style=>'margin: -10px 0px 0px 0px;'}
+  =render partial:'post', object:@post
 
 -if @post.older || @post.newer
   #navigation
