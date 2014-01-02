@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   end
 
   def index
-    @posts=Post.where(:active=>true)
+    @posts=Post.where(:active=>true).reverse
   end
 
   def create

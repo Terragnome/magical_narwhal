@@ -8,8 +8,7 @@
 
 %body
   #header
-    .logo
-      Misophikey
+    =link_to("Misophikey", root_path, :class=>'logo')
     .links
       =link_to('LATEST', latest_path)
       =link_to('ARCHIVE', archive_path)

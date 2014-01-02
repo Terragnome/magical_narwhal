@@ -1,4 +1,5 @@
 -@posts.each do |p|
   %div
     =p.date.strftime('%m/%d/%y')
+    =" - ##{p.id} - "
     =link_to("#{p.title}", post_path(p.id))
