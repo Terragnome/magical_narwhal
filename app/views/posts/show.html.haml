@@ -1,8 +1,8 @@
 .show
   =render partial:'post', object:@post
-
+.spacer
 -if @post.older || @post.newer
-  #navigation
+  .navigation
     -if @post.older
       =link_to("PREVIOUS", post_path(@post.older.id))
     -if @post.newer

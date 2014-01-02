@@ -1,4 +1,4 @@
-.user
+.user.clearfix
   -if user.icon
     =image_tag(user.icon, :class=>'icon')
   %h2
@@ -16,5 +16,5 @@
   %p.body
     =user.profile
 
-#navigation
-  =link_to("POSTS", user_archive_path(user.nickname))
+  .navigation
+    =link_to("POSTS", user_archive_path(user.nickname))
