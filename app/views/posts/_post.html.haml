@@ -3,7 +3,7 @@
     -if @post.user.icon
       =image_tag(@post.user.icon, :class=>'icon')
     .title
-      =@post.title
+      =@post.title.upcase
     .author
       -if @post.user.email
         .info
