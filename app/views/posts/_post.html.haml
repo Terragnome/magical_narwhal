@@ -1,7 +1,7 @@
 .post
   .header
     -if @post.user.icon
-      =image_tag('/assets/mlin_avatar.jpg', :class=>'icon')
+      =image_tag(@post.user.icon, :class=>'icon')
     .title
       =@post.title
     .author
