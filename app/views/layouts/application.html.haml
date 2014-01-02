@@ -14,7 +14,8 @@
       =link_to('ARCHIVE', archive_path)
       =link_to('ABOUT', about_path)
   #scene
-    =yield
+    .offset
+      =yield
   #subscribe
     =link_to image_tag('/assets/icons/rss.png'), "http://www.google.com"
     =link_to image_tag('/assets/icons/facebook.png'), "http://www.facebook.com"

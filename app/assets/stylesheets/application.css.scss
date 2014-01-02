@@ -149,6 +149,9 @@ p{
 	position: relative;
 	min-width: 500px;
 	z-index: 1;
+	.offset{
+		padding: 40px 0px 40px 0px;
+	}
 }
 
 #subscribe{
