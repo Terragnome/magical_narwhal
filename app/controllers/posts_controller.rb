@@ -1,13 +1,13 @@
 class PostsController < ApplicationController
   def latest
     @post=Post.last
+
     render :show
   end
 
   def index_by_user
-    logger.debug "TRACE #{params}"
     user=User.find_by_nickname(params[:nickname])
-    @posts=Post.where(:user_id=>user.id, :active=>true).reverse
+    @posts=Post.find(:all, :conditions=>['user_id=? AND active=true', user.id], :order=>'id DESC')
   end
 
   def index
