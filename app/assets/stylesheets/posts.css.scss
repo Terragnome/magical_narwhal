@@ -3,12 +3,28 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .index{
-	table{
-		font-family: 'Oswald';
-		font-size: 20px;
-		margin: 0 auto;
-		td, th, tr{
-			padding: 0px 30px 0px 30px;
+	font-family: 'Oswald';
+	.entry{
+		border: 0px;
+		padding: 3px 20px 3px 20px;
+		margin: 5px 0px 5px 0px;
+		.title{
+			color: #0099cc;
+			font-size: 20px;
+		}
+		.date{
+			color: #000000;
+			font-size: 14px;
+		}
+		&:hover{
+			background-color: #0099cc;
+			color: #ffffff;
+		}
+		&:hover .date{
+			color: #ffffff;
+		}
+		&:hover .title{
+			color: #ffffff;
 		}
 	}
 }
@@ -18,8 +34,9 @@
 }
 
 .post{
-	border-bottom: 1px solid #808080;
+	border-bottom: 1px solid #c0c0c0;
 	.header{
+		//border-bottom: 1px solid #c0c0c0;
 		.icon{
 			float: left;
 			height: 64px;
@@ -47,7 +64,7 @@
 		}
 	}
 	.body{
-		padding: 5px 0px 40px 0px;
+		padding: 10px 0px 40px 0px;
 	}
 }
 

@@ -1,10 +1,8 @@
 .index
-  %table
-    -@posts.each do |p|
-      %tr
-        %td
-          ="##{p.id}"
-        %td
-          =link_to("#{p.title}", post_path(p.id))
-        %td
-          =p.date.strftime('%a, %m/%d/%y')
+  -@posts.each do |p|
+    =link_to post_path(p.id) do
+      .entry.inline
+        .title
+          =p.title
+        .date
+          ="##{p.id} - #{p.date}"
