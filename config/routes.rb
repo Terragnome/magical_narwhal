@@ -7,7 +7,7 @@ MagicalNarwhal::Application.routes.draw do
   get 'latest' => 'posts#latest'
   resources :posts
 
-  #get 'contributors' => 'users#index'
+  get 'contributors' => 'users#index'
   resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.
