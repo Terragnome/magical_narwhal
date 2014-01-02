@@ -13,5 +13,8 @@
       =image_tag('/assets/icons/twitter.png')
       .text
         =link_to("@#{user.twitter_id}", "http://twitter.com/#{user.twitter_id}")
-  %p
+  %p.body
     =user.profile
+
+#navigation
+  =link_to("POSTS", user_posts_path(@user.nickname))

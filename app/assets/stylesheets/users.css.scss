@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .user{
+	border-bottom: 1px solid #c0c0c0;
 	.icon{
 		float: left;
 		margin: 0px 20px 0px 0px;
@@ -14,12 +15,24 @@
 			float: left;
 			height: 28px;
 			width: 28px;
-			margin: 0px 4px 0px 0px;
+			padding: 0px 4px 0px 0px;
 		}
 		.text{
 			display: inline-block;
 			font-family: 'Lato';
 			font-size: 22px;
 		}
+	}
+	.body{
+		padding: 10px 0px 40px 0px;
+	}
+}
+
+#navigation{
+	height: 70px;
+	margin: 20px 0px 0px 0px;
+	a{
+		font-size: 28px;
+		margin: 0px 10px 0px 0px;
 	}
 }

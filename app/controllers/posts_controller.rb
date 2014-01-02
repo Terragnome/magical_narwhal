@@ -4,6 +4,11 @@ class PostsController < ApplicationController
     render :show
   end
 
+  def index_by_user
+    logger.debug "TRACE #{params}"
+    @posts=Post.where(:active=>true).reverse
+  end
+
   def index
     @posts=Post.where(:active=>true).reverse
   end
