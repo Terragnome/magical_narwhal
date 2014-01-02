@@ -4,12 +4,8 @@
 
 .post{
 	border-bottom: 1px solid #808080;
-	margin: 0px;
-	padding: 20px 0px 30px 0px;
+	padding: 50px 0px 80px 0px;
 	.header{
-		border: 0px;
-		margin: 0px;
-		margin: 0px;
 		.icon{
 			float: left;
 			height: 50px;
@@ -17,17 +13,12 @@
 			width: 50px;
 		}
 		.title{
-			border: 0px;
 			display: inline-block;
 			font-size: 20px;
 			font-weight: bold;
-			margin: 0px;
-			padding: 0px;
 		}
 		.author{
-			border: 0px;
-			margin: 0px;
-			padding: 0px;
+			padding: 0px 0px 5px 0px;
 			.info{
 				display: inline-block;
 				margin: 0px 3px 0px 0px;
@@ -44,11 +35,8 @@
 			}
 		}
 		.subtitle{
-			border: 0px;
 			color: #f0f0f0;
 			font-size: 14px;
-			margin: 0px;
-			padding: 0px;
 		}
 	}
 	.body{
