@@ -1,4 +1,4 @@
 class SubscribeController < ApplicationController
-  def index
+  def feed
   end
 end

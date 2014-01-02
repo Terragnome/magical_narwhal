@@ -1,6 +1,7 @@
 MagicalNarwhal::Application.routes.draw do
   get 'about' => 'info#about'
   get 'archive' => 'posts#index'
+  get 'feed' => 'subscribe#feed'
 
   get 'latest' => 'posts#latest'
   resources :posts

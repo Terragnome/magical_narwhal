@@ -1,7 +1,7 @@
 .user
   -if user.icon
     =image_tag(user.icon, :class=>'icon')
-  .name
+  %h2
     =user.name.upcase
   -if user.email
     .info
@@ -13,5 +13,5 @@
       =image_tag('/assets/icons/twitter.png')
       .text
         =link_to("@#{user.twitter_id}", "http://twitter.com/#{user.twitter_id}")
-  %p.profile
+  %p
     =user.profile

@@ -40,6 +40,7 @@
 a{
 	color: #0099cc;
 	font-family: 'LeagueGothic';
+	font-size: bold;
 	text-decoration: none;
 	&:hover{
 		color: #006699;
@@ -74,6 +75,22 @@ html, body{
 	}
 }
 
+h1{
+	border: 0px;
+	font-family: 'Oswald';
+	font-size: 32px;
+	margin: 0px;
+	padding: 0px;
+}
+
+h2{
+	border: 0px;
+	font-family: 'Oswald';
+	font-size: 40px;
+	margin: 0px;
+	padding: 0px;
+}
+
 img{
 	border: 0px;
 	display: inline-block;
@@ -84,8 +101,30 @@ img{
 p{
 	border: 0px;
 	font-family: 'Rosario';
+	font-size: 14px;
 	margin: 0px;
 	padding: 0px;
+}
+
+table{
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+	td{
+		border: 0px;
+		margin: 0px;
+		padding: 0px;
+	}
+	th{
+		border: 0px;
+		margin: 0px;
+		padding: 0px;
+	}
+	tr{
+		border: 0px;
+		margin: 0px;
+		padding: 0px;
+	}
 }
 
 .black{ background-color: #000000; }
@@ -105,6 +144,7 @@ p{
 	height: 90px;
 	min-width: 860px;
 	width: 100%;
+
 	.logo{
 		color: #ffffff;
 		display: inline-block;
@@ -128,7 +168,6 @@ p{
 			color: #ffffff;
 			display: inline-block;
 			font-size: 28px;
-			font-weight: bold;
 			margin: 0px 0px 0px 30px;
 			&:hover{
 				color: #006699;

@@ -8,10 +8,6 @@ class PostsController < ApplicationController
     @posts=Post.where(:active=>true).reverse
   end
 
-  def create
-    @post=Post.new
-  end
-
   def show
     begin
       @post=Post.find(params[:id])

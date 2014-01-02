@@ -2,9 +2,9 @@
   .header
     -if post.user.icon
       =image_tag(post.user.icon, :class=>'icon')
-    .title
+    %h1
       =post.title.upcase
-    .info_section
+    %div
       .info
         =image_tag('/assets/icons/info.png')
         .text
