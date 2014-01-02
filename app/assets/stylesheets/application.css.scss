@@ -121,9 +121,9 @@ p{
 		z-index: 2;
 	}
 	.links{
-		display: inline-block;
-		float: right;
+		right: 0px;
 		margin: 10px 25px 10px 25px;
+		position: fixed;
 		a{
 			color: #ffffff;
 			display: inline-block;
