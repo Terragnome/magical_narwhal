@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140102171228) do
+ActiveRecord::Schema.define(version: 20140102172932) do
 
   create_table "posts", force: true do |t|
     t.integer  "user_id",                    null: false
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20140102171228) do
   create_table "users", force: true do |t|
     t.string   "name",          null: false
     t.string   "email",         null: false
-    t.string   "nickname"
+    t.string   "nickname",      null: false
     t.datetime "created_at"
     t.datetime "last_login_at"
     t.string   "icon"

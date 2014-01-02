@@ -7,7 +7,7 @@
     .info
       =image_tag('/assets/icons/envelope.png')
       .text
-        =mail_to(user.email, user.display_name)
+        =mail_to(user.email, user.nickname)
   -if user.twitter_id
     .info
       =image_tag('/assets/icons/twitter.png')

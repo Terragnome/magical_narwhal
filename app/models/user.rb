@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
   
   has_many :posts, dependent: :destroy
 
+  validates_presence_of :nickname
   validates :nickname, length:{minimum: 3}
 
   validates_presence_of :email
@@ -12,8 +13,4 @@ class User < ActiveRecord::Base
   
   validates_presence_of :name
   validates :name, length:{minimum: 3}
-
-  def display_name
-    self.nickname ? self.nickname : self.name
-  end
 end
