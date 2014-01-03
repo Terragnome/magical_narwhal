@@ -4,11 +4,12 @@
       =link_to image_tag(post.user.icon, :class=>'icon'), user_path(post.user.nickname)
     %h1
       =post.title.upcase
-    %div
-      .info
-        =image_tag('/assets/icons/info.png')
-        .text
-          =link_to(post.user.nickname, user_path(post.user.nickname))
+    .info_section
+      =link_to(user_path(post.user.nickname)) do
+        .info
+          =image_tag('/assets/icons/info.png')
+          .text
+            =post.user.nickname
       .info
         =image_tag('/assets/icons/calendar.png')
         .text

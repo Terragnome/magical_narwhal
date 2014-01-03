@@ -1,5 +1,4 @@
 MagicalNarwhal::Application.routes.draw do
-  get 'about' => 'info#about'  
   get 'archive' => 'posts#index'
   get 'archive/:nickname' => 'posts#index_by_user', :as=>'user_archive'
   get 'feed' => 'subscribe#feed'
@@ -7,7 +6,7 @@ MagicalNarwhal::Application.routes.draw do
   get 'latest' => 'posts#latest'
   resources :posts
 
-  get 'contributors' => 'users#index'
+  get 'about' => 'users#index'  
   resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.

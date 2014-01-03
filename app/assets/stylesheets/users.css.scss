@@ -14,21 +14,28 @@
 		float: left;
 		margin: 0px 20px 0px 0px;
 	}
-	.info{
-		display: inline-block;
-		margin: 0px 20px 0px 0px;
-		img{
-			float: left;
-			height: 28px;
-			width: 28px;
-			padding: 0px 4px 0px 0px;
-		}
-		.text{
+	.info_section{
+		margin: 10px 0px 0px 0px;
+		.info{
+			cursor: pointer;
 			display: inline-block;
-			font-family: 'Lato';
-			font-size: 22px;
+			margin: 0px 30px 0px 0px;
+			img{
+				float: left;
+				height: 28px;
+				width: 28px;
+				margin: 0px 7px 0px 0px;
+			}
+			.text{
+				cursor: inherit;
+				float: left;
+				font-family: 'Lato';
+				font-size: 22px;
+				margin: 1px 0px 0px 0px;
+			}
 		}
 	}
+
 	.body{
 		padding: 10px 0px 20px 0px;
 	}

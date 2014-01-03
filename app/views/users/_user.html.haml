@@ -3,18 +3,20 @@
     =image_tag(user.icon, :class=>'icon')
   %h2
     =user.name.upcase
-  -if user.email
-    .info
-      =image_tag('/assets/icons/envelope.png')
-      .text
-        =mail_to(user.email, user.nickname)
-  -if user.twitter_id
-    .info
-      =image_tag('/assets/icons/twitter.png')
-      .text
-        =link_to("@#{user.twitter_id}", "http://twitter.com/#{user.twitter_id}")
+  .info_section
+    -if user.email
+      =mail_to(user.email) do
+        .info
+          =image_tag('/assets/icons/mail.png')
+          .text
+            =user.nickname
+    -if user.twitter_id
+      =link_to("http://twitter.com/#{user.twitter_id}") do
+        .info
+          =image_tag('/assets/icons/twitter.png')
+          .text
+            ="@#{user.twitter_id}"
   %p.body
     =user.profile
-
   .navigation
     =link_to("POSTS", user_archive_path(user.nickname))

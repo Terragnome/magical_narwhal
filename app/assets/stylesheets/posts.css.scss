@@ -4,15 +4,17 @@
 
 .index{
 	font-family: 'Oswald';
+
 	.entry{
 		border: 0px;
 		cursor: pointer;
 		padding: 1px 10px 1px 10px;
-		margin: 3px 0px 3px 0px;
+		margin: 2px 0px 2px 0px;
 
 		.title{
 			color: #0099cc;
 			cursor: inherit;
+			font-family: 'Oswald';
 			font-size: 18px;
 		}
 		.date{
@@ -35,26 +37,35 @@
 
 .post{
 	.header{
-		//border-bottom: 1px solid #c0c0c0;
 		.icon{
 			float: left;
 			height: 64px;
 			margin: 6px 12px 6px 0px;
 			width: 64px;
 		}
-		.info{
-			display: inline-block;
-			margin: 0px 15px 0px 0px;
-			img{
-				float: left;
-				height: 20px;
-				width: 20px;
-				margin: 0px 2px 0px 0px;
-			}
-			.text{
+		.info_section{
+			margin: 2px 0px 0px 0px;
+			.info{
+				cursor: pointer;
 				display: inline-block;
-				font-family: 'Lato';
-				font-size: 14px;
+				margin: 0px 13px 0px 0px;
+				img{
+					float: left;
+					height: 20px;
+					width: 20px;
+					margin: 0px 3px 0px 0px;
+
+				}
+				a{
+					font-size: 16px;
+				}
+				.text{
+					cursor: inherit;
+					float: left;
+					font-family: 'Lato';
+					font-size: 14px;
+					margin: 1px 0px 0px 0px;
+				}
 			}
 		}
 		.subtitle{
