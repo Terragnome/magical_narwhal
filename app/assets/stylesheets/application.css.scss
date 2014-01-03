@@ -13,6 +13,11 @@
  */
 
 @font-face{
+	font-family: 'CrimsonText';
+	src: url('/fonts/crimson/CrimsonText-Roman.ttf');
+}
+
+@font-face{
 	font-family: 'Lato';
 	src: url('/fonts/lato/Lato-Reg.ttf');
 }
@@ -28,6 +33,11 @@
 }
 
 @font-face{
+	font-family: 'RobotoSlab';
+	src: url('/fonts/roboto-slab/RobotoSlab-Regular.ttf');
+}
+
+@font-face{
 	font-family: 'Rosario';
 	src: url('/fonts/rosario/Rosario-Regular.otf');
 }
@@ -39,8 +49,8 @@
 
 a{
 	color: #0099cc;
-	font-family: 'LeagueGothic';
-	font-size: bold;
+	font-family: 'CrimsonText';
+	font-weight: bold;
 	text-decoration: none;
 	&:hover{
 		color: #006699;
@@ -59,7 +69,7 @@ html, body{
 	background-repeat: no-repeat;
 	background-size: cover;
 	border: 0px;
-	font-family: 'Rosario';
+	font-family: 'Lato';
 	height: 100%;
 	margin: 0px;
 	padding: 0px;
@@ -100,8 +110,8 @@ img{
 
 p{
 	border: 0px;
-	font-family: 'Rosario';
-	font-size: 14px;
+	font-family: 'Lato';
+	font-size: 16px;
 	margin: 0px;
 	padding: 0px;
 }
@@ -146,6 +156,16 @@ table{
     font-size: 0;
     height: 0;
     visibility: hidden;
+}
+
+.small_icon{
+	height: 20px;
+	width: 20px;
+}
+
+.medium_icon{
+	height: 28px;
+	width: 28px;
 }
 
 .spacer{
