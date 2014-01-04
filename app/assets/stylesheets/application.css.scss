@@ -209,6 +209,7 @@ table{
 	z-index: 2;
 
 	.logo{
+		cursor:inherit;
 		position: fixed;
 		z-index: 2;
 		img{
@@ -220,6 +221,7 @@ table{
 		}
 		.title{
 			color: #ffffff;
+			cursor: inherit;
 			float: left;
 			font-family: 'LeagueGothic';
 			font-size:170px;

@@ -1,6 +1,6 @@
 class InfoController < ApplicationController
   def about
-    @users=User.all
+    @users=[User.first]
   end
   
   def contact
