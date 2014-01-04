@@ -80,7 +80,18 @@
 	}
 	.body{
 		max-width: 640px;
-		padding: 20px 0px 40px 0px;
+		padding: 20px 0px 20px 0px;
+	}
+	.actions{
+		margin: 3px 0px 5px 0px;
+		a{
+			display: inline-block;
+			margin: 0px 10px 0px 0px;
+		}
+	}
+	.tags{
+		font-family: 'Oswald';
+		font-weight: bold;
 	}
 }
 
