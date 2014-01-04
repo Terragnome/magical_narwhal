@@ -34,6 +34,9 @@ gem 'thin'
 gem 'haml'
 gem 'haml-rails'
 
+#Tags
+gem 'acts-as-taggable-on'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false

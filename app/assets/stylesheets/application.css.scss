@@ -60,7 +60,7 @@
 a{
 	color: #0099cc;
 	cursor: pointer;
-	font-family: 'CrimsonText';
+	font-family: 'Oswald';
 	text-decoration: none;
 	&:hover{
 		color: #006699;
@@ -81,6 +81,7 @@ html, body{
 	border: 0px;
 	height: 100%;
 	margin: 0px;
+	min-width: 600px;
 	padding: 0px;
 	width: 100%;
 	
@@ -179,74 +180,122 @@ table{
 
 .spacer{
 	border-bottom: 1px solid #c0c0c0;
-	margin: 0px 0px 40px 0px;
+}
+
+.title{
+	font-family: 'Oswald';
+}
+
+.date{
+	font-family: 'Lato';
+}
+
+.navigation{
+	a{
+		font-size: 28px;
+		font-weight: bold;
+	}
 }
 
 #header{
-	background-color: #0099cc;
-	box-shadow: 0px 3px 8px #505050;
-	height: 60px;
+	//background-image:url('avatars/mikey.png');
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	background-size: auto 150px;
+	background-color: #000000;
+	//box-shadow: 0px 3px 15px #c0c0c0;
+	height: 175px;
 	width: 100%;
 	z-index: 2;
 
 	.logo{
-		top: 0px;
-		left: 0px;
-		color: #ffffff;
-		display: inline-block;
-		font-family: 'Stalemate';
-		font-size: 50px;
-		margin: 0px 10px 0px 10px;
+		cursor:inherit;
 		position: fixed;
-		text-shadow:
-			1px 1px 3px #0099cc,
-			1px 1px 3px #0099cc,
-			1px 1px 3px #0099cc,
-			1px 1px 3px #0099cc,
-			1px 1px 3px #0099cc;
+		z-index: 2;
+		img{
+			top: 25px;
+			display: inline-block;
+			height: 150px;
+			pointer-events: none;
+			position: fixed;
+		}
+		.title{
+			color: #ffffff;
+			cursor: inherit;
+			float: left;
+			font-family: 'LeagueGothic';
+			font-size:170px;
+			margin: 10px 0px 0px 10px;
+			//text-shadow: 1px 1px 3px #202020;
+		}
 	}
 	.links{
+		float:right;
 		top: 0px;
 		right: 0px;
 		margin: 10px 25px 10px 25px;
-		position: fixed;
-		a{
-			color: #ffffff;
+		.link{
 			display: inline-block;
-			font-size: 20px;
-			margin: 0px 0px 0px 30px;
-			&:hover{
-				color: #006699;
+			margin: 0px 0px 0px 25px;
+			a{
+				color: #ffffff;
+				display: inline-block;
+				font-family: 'Oswald';
+				font-size: 20px;
+				font-weight: bold;
+				&:hover{
+					color: #006699;
+				}
 			}
-		}
-		img{
+			img{
+				display: inline-block;
+				height: 20px;
+				width: 20px;
+			}
+			.latest{
+				color: #0099cc;
+			}
 		}
 	}
 }
 
 #scene{
 	color: #000000;
-	height: calc(100% - 60px);
-	height: -moz-calc(100% - 60px);
-	height: -webkit-calc(100% - 60px);
+	height: calc(100% - 175px);
+	height: -moz-calc(100% - 175px);
+	height: -webkit-calc(100% - 175px);
 	overflow: scroll;
 	position: relative;
 	text-align: center;
 	z-index: 1;
 	.scene_body{
 		display: inline-block;
-		margin: 100px 0px 80px 0px;
-		min-width: 500px;
+		margin: 30px 0px 80px 0px;
+		max-width: 960px;
+		min-height: calc(100% - 141px);
+		min-height: -moz-calc(100% - 141px);
+		min-height: -webkit-calc(100% - 141px);
 		width: calc(100% - 180px);
+		width: -moz-calc(100% - 180px);
+		width: -webkit-calc(100% - 180px);
 		text-align: left;
 		
+	}
+	#footer{
+		height: 27px;
+		padding: 3px 0px 0px 0px;
+		a{
+			color: #808080;
+			font-size: 13px;
+			margin: 0px 10px 0px 10px;
+		}
 	}
 }
 
 #subscribe{
 	bottom: 0px;
 	right: 0px;
-	margin: 10px;
+	margin: 0px 10px 0px 10px;
 	position: fixed;
 	z-index: 2;
 	img{

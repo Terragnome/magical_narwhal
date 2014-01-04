@@ -1,21 +1,34 @@
 !!! html
 %html
 %head
-  %title MISOPHIKEY
+  %title
+    TITLE
   = stylesheet_link_tag    "application", media:"all", "data-turbolinks-track"=>true
   = javascript_include_tag "application", "data-turbolinks-track"=>true
   =csrf_meta_tags
 
 %body
   #header
-    =link_to("Misophikey", root_path, :class=>'logo')
-    .links
-      =link_to('LATEST', latest_path)
-      =link_to('ARCHIVE', archive_path)
-      =link_to('ABOUT', about_path)
+    =link_to(root_path) do
+      .logo
+        .title
+          TITLE
+        =image_tag('/assets/avatars/mikey.png')
+      .links
+        .link
+          =link_to('LATEST', latest_path, :class=>'latest')
+        .link
+          =link_to('ARCHIVE', archive_path)
   #scene
     .scene_body
       =yield
+    .spacer
+    #footer
+      =link_to('ABOUT', about_path)
+      =link_to('CONTACT', contact_path)
+      =link_to('PRIVACY', privacy_path)
+      =link_to('TERMS', terms_path)
+
   #subscribe
     =link_to image_tag('/assets/icons/twitter.png'), "http://www.twitter.com"
     =link_to image_tag('/assets/icons/facebook.png'), "http://www.facebook.com/pages/"

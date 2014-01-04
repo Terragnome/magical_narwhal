@@ -5,9 +5,15 @@ class PostsController < ApplicationController
     render :show
   end
 
+  def index_by_tag
+    @posts=Post.tagged_with(params[:tag])
+    render :index
+  end
+
   def index_by_user
     user=User.find_by_nickname(params[:nickname])
     @posts=Post.find(:all, :conditions=>['user_id=? AND active=true', user.id], :order=>'id DESC')
+    render :index
   end
 
   def index

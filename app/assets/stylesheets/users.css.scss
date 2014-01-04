@@ -9,7 +9,7 @@
 }
 
 .user{
-	margin: 0px 0px 40px 0px;
+	margin: 40px 0px 40px 0px;
 	.icon{
 		float: left;
 		margin: 0px 20px 0px 0px;
@@ -29,20 +29,12 @@
 			.text{
 				cursor: inherit;
 				float: left;
-				font-family: 'Lato';
 				font-size: 22px;
-				margin: 1px 0px 0px 0px;
 			}
 		}
 	}
 
 	.body{
 		padding: 15px 0px 20px 0px;
-	}
-	
-	.navigation{
-		a{
-			font-size: 28px;
-		}
 	}
 }

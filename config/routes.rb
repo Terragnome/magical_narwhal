@@ -1,12 +1,17 @@
 MagicalNarwhal::Application.routes.draw do
-  get 'archive' => 'posts#index'
-  get 'archive/:nickname' => 'posts#index_by_user', :as=>'user_archive'
   get 'feed' => 'subscribe#feed'
 
+  get 'about' => 'info#about'
+  get 'contact' => 'info#contact'
+  get 'privacy' => 'info#privacy'
+  get 'terms' => 'info#terms'
+
   get 'latest' => 'posts#latest'
+  get 'archive' => 'posts#index'
+  get 'archive/user/:nickname' => 'posts#index_by_user', :as=>'user_archive'
+  get 'archive/tag/:tag' => 'posts#index_by_tag', :as=>'tag_archive'
   resources :posts
 
-  get 'about' => 'users#index'  
   resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.

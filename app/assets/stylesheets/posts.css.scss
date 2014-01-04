@@ -3,25 +3,12 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .index{
-	font-family: 'Oswald';
+	margin: 40px 0px 0px 0px;
 
 	.entry{
 		border: 0px;
 		cursor: pointer;
-		padding: 1px 10px 1px 10px;
-		margin: 8px 15px 8px 0px;
-
-		.title{
-			color: #0099cc;
-			cursor: inherit;
-			font-family: 'Oswald';
-			font-size: 18px;
-		}
-		.date{
-			color: #000000;
-			cursor: inherit;
-			font-size: 14px;
-		}
+		padding: 5px 20px 10px 20px;
 		&:hover{
 			background-color: #0099cc;
 			color: #ffffff;
@@ -33,9 +20,30 @@
 			color: #ffffff;
 		}
 	}
+	.black{
+		background-color: #000000;
+		color: #ffffff;
+	}
+	.gray{
+		background-color: #e0e0e0;
+		color: #000000;
+	}
+	.title{
+		color: #0099cc;
+		cursor: inherit;
+		font-size: 18px;
+	}
+	.date{
+		cursor: inherit;
+		font-size: 14px;
+	}
+}
+
+.show{
 }
 
 .post{
+	margin: 30px 0px 0px 0px;
 	.header{
 		.icon{
 			float: left;
@@ -48,16 +56,13 @@
 			.info{
 				cursor: pointer;
 				display: inline-block;
-				margin: 0px 13px 0px 0px;
+				margin: 0px 30px 0px 0px;
 				img{
 					float: left;
 					height: 20px;
 					width: 20px;
 					margin: 0px 3px 0px 0px;
 
-				}
-				a{
-					font-size: 16px;
 				}
 				.text{
 					cursor: inherit;
@@ -74,15 +79,33 @@
 		}
 	}
 	.body{
-		padding: 20px 0px 40px 0px;
+		max-width: 640px;
+		padding: 20px 0px 20px 0px;
+	}
+	.actions{
+		margin: 3px 0px 5px 0px;
+		a{
+			display: inline-block;
+			margin: 0px 10px 0px 0px;
+		}
+	}
+	.tags{
+		font-family: 'Oswald';
+		font-weight: bold;
+		.tags_title{
+			display: inline-block;
+			margin: 0px 10px 0px 0px;
+		}
+		a{
+			display: inline-block;
+		}
 	}
 }
 
 .navigation{
 	height: 70px;
-	margin: 20px 0px 0px 0px;
+	margin: 10px 0px 0px 0px;
 	a{
-		font-size: 28px;
 		margin: 0px 25px 0px 0px;
 	}
 }
