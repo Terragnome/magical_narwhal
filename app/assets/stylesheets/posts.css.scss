@@ -92,6 +92,13 @@
 	.tags{
 		font-family: 'Oswald';
 		font-weight: bold;
+		.tags_title{
+			display: inline-block;
+			margin: 0px 10px 0px 0px;
+		}
+		a{
+			display: inline-block;
+		}
 	}
 }
 

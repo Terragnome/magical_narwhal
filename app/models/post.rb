@@ -3,6 +3,8 @@ class Post < ActiveRecord::Base
 
   scope :active, -> {where(active:true)}
   
+  acts_as_taggable
+  
   def self.oldest
     @@oldest ||= Post.active.first
   end
