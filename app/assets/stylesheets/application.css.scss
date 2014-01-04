@@ -236,9 +236,9 @@ table{
 
 #scene{
 	color: #000000;
-	height: calc(100% - 60px);
-	height: -moz-calc(100% - 60px);
-	height: -webkit-calc(100% - 60px);
+	height: calc(100% -150px);
+	height: -moz-calc(100% - 150px);
+	height: -webkit-calc(100% - 150px);
 	overflow: scroll;
 	position: relative;
 	text-align: center;
