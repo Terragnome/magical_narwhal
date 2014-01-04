@@ -203,7 +203,6 @@ table{
 	background-position: left bottom;
 	background-size: auto 150px;
 	background-color: #000000;
-	//border-bottom: 200px solid #ffffff;
 	//box-shadow: 0px 3px 15px #c0c0c0;
 	height: 175px;
 	width: 100%;
@@ -259,10 +258,22 @@ table{
 	.scene_body{
 		display: inline-block;
 		margin: 60px 0px 80px 0px;
+		min-height: calc(100% - 175px);
+		min-height: -moz-calc(100% - 175px);
+		min-height: -webkit-calc(100% - 175px);
 		max-width: 960px;
 		width: calc(100% - 180px);
+		width: -moz-calc(100% - 180px);
+		width: -webkit-calc(100% - 180px);
 		text-align: left;
 		
+	}
+	#about{
+		a{
+			color: #808080;
+			font-size: 14px;
+			margin: 0px 15px 0px 15px;
+		}
 	}
 }
 

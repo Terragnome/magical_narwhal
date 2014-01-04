@@ -1,7 +1,12 @@
 MagicalNarwhal::Application.routes.draw do
   get 'archive' => 'posts#index'
   get 'archive/:nickname' => 'posts#index_by_user', :as=>'user_archive'
+
   get 'feed' => 'subscribe#feed'
+
+  get 'contact' => 'posts#latest'
+  get 'privacy' => 'posts#latest'
+  get 'terms' => 'posts#latest'
 
   get 'latest' => 'posts#latest'
   resources :posts
