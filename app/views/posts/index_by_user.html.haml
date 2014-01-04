@@ -1,8 +1,0 @@
-.index
-  -@posts.each do |p|
-    =link_to post_path(p.id) do
-      .entry.inline
-        .title
-          =p.title
-        .date
-          ="##{p.id} - #{p.date}"

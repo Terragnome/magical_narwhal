@@ -8,6 +8,7 @@ class PostsController < ApplicationController
   def index_by_user
     user=User.find_by_nickname(params[:nickname])
     @posts=Post.find(:all, :conditions=>['user_id=? AND active=true', user.id], :order=>'id DESC')
+    render :index
   end
 
   def index
