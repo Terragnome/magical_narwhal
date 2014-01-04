@@ -30,5 +30,5 @@
         .tags_title
           TAGS
         -post.tag_list.each do |tag|
-          =link_to tag.upcase
+          =link_to(tag.upcase, tag_archive_path(tag))
   .spacer
