@@ -251,7 +251,7 @@ table{
 
 #scene{
 	color: #000000;
-	height: calc(100% -175px);
+	height: calc(100% - 175px);
 	height: -moz-calc(100% - 175px);
 	height: -webkit-calc(100% - 175px);
 	overflow: scroll;
@@ -261,21 +261,23 @@ table{
 	.scene_body{
 		display: inline-block;
 		margin: 30px 0px 80px 0px;
-		min-height: calc(100% - 175px);
-		min-height: -moz-calc(100% - 175px);
-		min-height: -webkit-calc(100% - 175px);
 		max-width: 960px;
+		min-height: calc(100% - 141px);
+		min-height: -moz-calc(100% - 141px);
+		min-height: -webkit-calc(100% - 141px);
 		width: calc(100% - 180px);
 		width: -moz-calc(100% - 180px);
 		width: -webkit-calc(100% - 180px);
 		text-align: left;
 		
 	}
-	#about{
+	#footer{
+		height: 27px;
+		padding: 3px 0px 0px 0px;
 		a{
 			color: #808080;
-			font-size: 14px;
-			margin: 0px 15px 0px 15px;
+			font-size: 13px;
+			margin: 0px 10px 0px 10px;
 		}
 	}
 }
@@ -283,7 +285,7 @@ table{
 #subscribe{
 	bottom: 0px;
 	right: 0px;
-	margin: 10px;
+	margin: 0px 10px 0px 10px;
 	position: fixed;
 	z-index: 2;
 	img{
