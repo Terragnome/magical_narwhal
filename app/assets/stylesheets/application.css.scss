@@ -60,7 +60,7 @@
 a{
 	color: #0099cc;
 	cursor: pointer;
-	font-family: 'CrimsonText';
+	font-family: 'Oswald';
 	text-decoration: none;
 	&:hover{
 		color: #006699;
@@ -179,20 +179,34 @@ table{
 
 .spacer{
 	border-bottom: 1px solid #c0c0c0;
-	margin: 0px 0px 40px 0px;
+}
+
+.title{
+	font-family: 'Oswald';
+}
+
+.date{
+	font-family: 'Lato';
+}
+
+.navigation{
+	a{
+		font-size: 28px;
+		font-weight: bold;
+	}
 }
 
 #header{
-	background-color: #ffffff;
+	background-color: #000000;
 	box-shadow: 0px 3px 15px #c0c0c0;
-	height: 60px;
+	height: 150px;
 	width: 100%;
 	z-index: 2;
 
 	.logo{
 		top: 0px;
 		left: 0px;
-		color: #000000;
+		color: #ffffff;
 		display: inline-block;
 		font-family: 'Stalemate';
 		font-size: 50px;
@@ -207,16 +221,15 @@ table{
 		margin: 10px 25px 10px 25px;
 		position: fixed;
 		a{
-			color: #000000;
+			color: #ffffff;
 			display: inline-block;
+			font-family: 'Oswald';
 			font-size: 20px;
+			font-weight: bold;
 			margin: 0px 0px 0px 30px;
-			text-shadow: 0px 0px 6px #a0a0a0;
 			&:hover{
 				color: #006699;
 			}
-		}
-		img{
 		}
 	}
 }
@@ -232,7 +245,7 @@ table{
 	z-index: 1;
 	.scene_body{
 		display: inline-block;
-		margin: 100px 0px 80px 0px;
+		margin: 60px 0px 80px 0px;
 		min-width: 500px;
 		max-width: 960px;
 		width: calc(100% - 180px);
