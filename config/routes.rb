@@ -4,14 +4,14 @@ MagicalNarwhal::Application.routes.draw do
 
   get 'feed' => 'subscribe#feed'
 
-  get 'contact' => 'posts#latest'
-  get 'privacy' => 'posts#latest'
-  get 'terms' => 'posts#latest'
+  get 'about' => 'info#about'
+  get 'contact' => 'info#contact'
+  get 'privacy' => 'info#privacy'
+  get 'terms' => 'info#terms'
 
   get 'latest' => 'posts#latest'
   resources :posts
 
-  get 'about' => 'users#index'  
   resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.

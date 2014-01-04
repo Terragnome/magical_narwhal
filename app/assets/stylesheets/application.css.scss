@@ -232,19 +232,27 @@ table{
 		top: 0px;
 		right: 0px;
 		margin: 10px 25px 10px 25px;
-		a{
-			color: #ffffff;
+		.link{
 			display: inline-block;
-			font-family: 'Oswald';
-			font-size: 20px;
-			font-weight: bold;
-			margin: 0px 0px 0px 30px;
-			&:hover{
-				color: #006699;
+			margin: 0px 0px 0px 25px;
+			a{
+				color: #ffffff;
+				display: inline-block;
+				font-family: 'Oswald';
+				font-size: 20px;
+				font-weight: bold;
+				&:hover{
+					color: #006699;
+				}
 			}
-		}
-		.latest{
-			color: #0099cc;
+			img{
+				display: inline-block;
+				height: 20px;
+				width: 20px;
+			}
+			.latest{
+				color: #0099cc;
+			}
 		}
 	}
 }

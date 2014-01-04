@@ -14,8 +14,10 @@
         TITLE
       =image_tag('/assets/avatars/mikey.png')
     .links
-      =link_to('LATEST', latest_path, :class=>'latest')
-      =link_to('ARCHIVE', archive_path)
+      .link
+        =link_to('LATEST', latest_path, :class=>'latest')
+      .link
+        =link_to('ARCHIVE', archive_path)
   #scene
     .scene_body
       =yield
