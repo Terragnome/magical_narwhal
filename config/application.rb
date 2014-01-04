@@ -21,5 +21,6 @@ module MagicalNarwhal
     # config.i18n.default_locale = :de
 
     ActsAsTaggableOn.force_lowercase = true
+    ActsAsTaggableOn.remove_unused_tags = true
   end
 end
