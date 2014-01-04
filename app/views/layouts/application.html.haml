@@ -8,11 +8,13 @@
 
 %body
   #header
-    =link_to("Misophikey", root_path, :class=>'logo')
+    .logo
+      .title
+        MIKE
+      =image_tag('/assets/avatars/mikey.png')
     .links
       =link_to('LATEST', latest_path)
       =link_to('ARCHIVE', archive_path)
-      =link_to('ABOUT', about_path)
   #scene
     .scene_body
       =yield
