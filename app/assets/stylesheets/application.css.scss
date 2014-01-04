@@ -75,7 +75,7 @@ div{
 }
 
 html, body{
-	//background-image:url('backgrounds/gradient3.jpeg');
+	background-image:url('backgrounds/summer.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	border: 0px;
@@ -157,10 +157,6 @@ table{
 .bold{ font-weight: bold; }
 .inline{ display: inline-block; }
 
-.text_center{ text-align: center; }
-.text_left{ text-align: left; }
-.text_right{ text-align: right; }
-
 .clearfix{ display: inline-block; }
 .clearfix:after{
     clear: both;
@@ -191,7 +187,6 @@ table{
 	box-shadow: 0px 3px 8px #505050;
 	height: 60px;
 	width: 100%;
-	position: fixed;
 	z-index: 2;
 
 	.logo{
@@ -213,13 +208,13 @@ table{
 	.links{
 		top: 0px;
 		right: 0px;
-		position: fixed;
 		margin: 10px 25px 10px 25px;
+		position: fixed;
 		a{
 			color: #ffffff;
 			display: inline-block;
-			font-size: 24px;
-			margin: 0px 0px 0px 20px;
+			font-size: 20px;
+			margin: 0px 0px 0px 30px;
 			&:hover{
 				color: #006699;
 			}
@@ -231,19 +226,20 @@ table{
 
 #scene{
 	color: #000000;
-	display: inline-block;
-	height: calc(100% - 90px);
-	height: -moz-calc(100% - 90px);
-	height: -webkit-calc(100% - 90px);
+	height: calc(100% - 60px);
+	height: -moz-calc(100% - 60px);
+	height: -webkit-calc(100% - 60px);
 	overflow: scroll;
 	position: relative;
-	width: calc(100% - 180px);
-	min-width: 520px;
-	max-width: 860px;
-	text-align: left;
+	text-align: center;
 	z-index: 1;
-	.offset{
-		margin: 150px 0px 80px 0px;
+	.scene_body{
+		display: inline-block;
+		margin: 100px 0px 80px 0px;
+		min-width: 500px;
+		width: calc(100% - 180px);
+		text-align: left;
+		
 	}
 }
 
