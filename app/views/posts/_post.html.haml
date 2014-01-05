@@ -14,9 +14,6 @@
         =image_tag('/assets/icons/calendar.png')
         .text.date
           =post.display_time
-    -if post.subtitle
-      .subtitle
-        =post.subtitle
   %p.body
     =post.body.html_safe
   .spacer
