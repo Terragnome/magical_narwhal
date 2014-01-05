@@ -223,19 +223,19 @@ table{
 		position: fixed;
 		z-index: 2;
 		img{
-			top: 25px;
-			display: inline-block;
+			float: left;
 			height: 150px;
+			margin: 25px 0px 0px 0px;
 			pointer-events: none;
-			position: fixed;
 		}
 		.title{
 			color: #ffffff;
 			cursor: inherit;
-			float: left;
+			display: inline-block;
 			font-family: 'LeagueGothic';
-			font-size:170px;
-			margin: 10px 0px 0px 10px;
+			font-size: 120px;
+			margin: 58px 0px 0px 0px;
+			position: fixed;
 			//text-shadow: 1px 1px 3px #202020;
 		}
 	}
