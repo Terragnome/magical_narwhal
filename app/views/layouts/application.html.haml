@@ -13,7 +13,7 @@
       .logo
         =image_tag('/assets/avatars/mikey.png')
         .title
-          =@app_title.upcase
+          ="<span style='color:#0099cc;'>#{@app_title_prefix}</span>#{@app_title_suffix}".html_safe
       .links
         .link
           =link_to('LATEST', latest_path, :class=>'latest')
