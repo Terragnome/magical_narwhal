@@ -13,7 +13,13 @@
       .logo
         =image_tag('/assets/avatars/mikey.png')
         .title
-          ="<span style='color:#0099cc;'>#{@app_title_prefix}</span>#{@app_title_suffix}".html_safe
+          -title=""
+          -@app_title_components.count.times do |i|
+            -if i%2 == 0
+              -title << "<span style='color:#0099cc;'>#{@app_title_components[i]}</span>"
+            -else
+              -title << @app_title_components[i]
+          =title.html_safe
       .links
         .link
           =link_to('LATEST', latest_path, :class=>'latest')

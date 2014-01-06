@@ -6,8 +6,7 @@ class ApplicationController < ActionController::Base
   before_filter :set_constants
 
   def set_constants
-    @app_title_prefix='HUAI'
-    @app_title_suffix='TZER'
-    @app_title="#{@app_title_prefix}#{@app_title_suffix}"
+    @app_title_components=['LIN', 'TWINS']
+    @app_title=@app_title_components.join('')
   end
 end
