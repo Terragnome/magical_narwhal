@@ -13,7 +13,7 @@
       .logo
         =image_tag('/assets/avatars/mikey.png')
         .title
-          =@app_title
+          =@app_title.upcase
       .links
         .link
           =link_to('LATEST', latest_path, :class=>'latest')
