@@ -2,7 +2,7 @@
 %html
 %head
   %title
-    TITLE
+    =@app_title
   = stylesheet_link_tag    "application", media:"all", "data-turbolinks-track"=>true
   = javascript_include_tag "application", "data-turbolinks-track"=>true
   =csrf_meta_tags
@@ -11,9 +11,9 @@
   #header
     =link_to(root_path) do
       .logo
-        .title
-          TITLE
         =image_tag('/assets/avatars/mikey.png')
+        .title
+          =@app_title
       .links
         .link
           =link_to('LATEST', latest_path, :class=>'latest')

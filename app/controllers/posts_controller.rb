@@ -1,4 +1,4 @@
-class PostsController < ApplicationController
+class PostsController < ApplicationController  
   def latest
     @post=Post.last
 
@@ -6,23 +6,23 @@ class PostsController < ApplicationController
   end
 
   def index_by_tag
-    @posts=Post.tagged_with(params[:tag])
+    @posts=Post.active.tagged_with(params[:tag])
     render :index
   end
 
   def index_by_user
     user=User.find_by_nickname(params[:nickname])
-    @posts=Post.find(:all, :conditions=>['user_id=? AND active=true', user.id], :order=>'id DESC')
+    @posts=Post.active.find(:all, :conditions=>['user_id=?', user.id], :order=>'id DESC')
     render :index
   end
 
   def index
-    @posts=Post.where(:active=>true).reverse
+    @posts=Post.active.where(:active=>true).reverse
   end
 
   def show
     begin
-      @post=Post.find(params[:id])
+      @post=Post.active.find(params[:id])
     rescue
       redirect_to latest_path and return
     end
