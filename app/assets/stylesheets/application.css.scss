@@ -203,6 +203,7 @@ table{
 	}
 }
 
+$header_height: 175px;
 #header{
 	//background-image:url('avatars/mikey.png');
 	background-repeat: no-repeat;
@@ -214,18 +215,19 @@ table{
 		0px 2px 0px #ffffff,
 		0px 4px 0px #000000;
 	*/
-	height: 175px;
+	height: #{$header_height};
 	width: 100%;
 	z-index: 2;
 
+	$logo_img_height: 150px;
 	.logo{
 		cursor:inherit;
 		position: fixed;
 		z-index: 2;
 		img{
 			float: left;
-			height: 150px;
-			margin: 25px 0px 0px 0px;
+			height: #{$logo_img_height};
+			margin: #{$header_height - $logo_img_height} 0px 0px 0px;
 			pointer-events: none;
 		}
 		.title{
