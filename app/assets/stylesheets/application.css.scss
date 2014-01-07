@@ -81,7 +81,7 @@ html, body{
 	border: 0px;
 	height: 100%;
 	margin: 0px;
-	min-width: 600px;
+	min-width: 640px;
 	padding: 0px;
 	width: 100%;
 	
@@ -172,6 +172,10 @@ table{
     font-size: 0;
     height: 0;
     visibility: hidden;
+}
+
+.fb-comments, .fb-comments * {
+    width:100% !important;
 }
 
 .small_icon{
