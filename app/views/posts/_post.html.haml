@@ -20,7 +20,8 @@
   .actions
     %a.comment_button
       COMMENT
-    =link_to('SHARE')
+    %a.share_button
+      SHARE
     -if post.tag_list.count>0
       .tags.right
         .tags_title
@@ -28,4 +29,4 @@
         -post.tag_list.each do |tag|
           =link_to(tag.upcase, tag_archive_path(tag))
   .spacer
-    .fb-comments{'data-href'=>'http://example.com/comments', 'data-numposts'=>'5', 'data-colorscheme'=>'light', :style=>'display:none;'}
+    .fb-comments{'data-href'=>post_url(post.id), 'data-numposts'=>'5', 'data-colorscheme'=>'light', :style=>'display:none;'}

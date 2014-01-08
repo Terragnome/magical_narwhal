@@ -26,16 +26,6 @@ function onReady(){
 	  scalarX: 3,
 	  scalarY: 3,
 	});
-
-	//Create facebook comment section
-	var d = document;
-	var s = 'script';
-	var id = 'facebook-jssdk';
-	var js, fjs = d.getElementsByTagName(s)[0];
-  	if (d.getElementById(id)) return;
-  	js = d.createElement(s); js.id = id;
-  	js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=696404120390063";
-  	fjs.parentNode.insertBefore(js, fjs);
 }
 
 $(onReady);
