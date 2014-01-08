@@ -18,7 +18,7 @@
     =post.body.html_safe
   .spacer
   .actions
-    %a{:id=>'comment_button'}
+    %a.comment_button
       COMMENT
     =link_to('SHARE')
     -if post.tag_list.count>0
