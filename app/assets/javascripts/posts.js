@@ -10,10 +10,9 @@ function onReady(){
   	fjs.parentNode.insertBefore(js, fjs);
 
 	//Show/hide facebook comments section
-	var commentButton = $('.comment_button:first');
-	if(commentButton != null){
-		commentButton.click(function(){
-			var commentSection = $('.fb-comments:first');
+	$('.comment_button').each(function(commentButton){
+		$(this).click(function(){
+			var commentSection = $(this).parent().parent().find('.fb-comments');
 			if(commentSection != null){
 				if( commentSection.css('display') == 'none' ){
 					commentSection.css('display', 'block');
@@ -22,7 +21,7 @@ function onReady(){
 				}
 			}
 		});
-	}
+	});
 
 	//Share button
 	var shareButton = $('.share_button:first');
