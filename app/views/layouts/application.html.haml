@@ -8,34 +8,9 @@
   =csrf_meta_tags
 %body
   #fb-root
-  #header
-    =link_to(root_path) do
-      .logo
-        =image_tag('/assets/avatars/mikey.png')
-        .title
-          -title=""
-          -@app_title_components.count.times do |i|
-            -if i%2 == 0
-              -title << "<span style='color:#0099cc;'>#{@app_title_components[i]}</span>"
-            -else
-              -title << @app_title_components[i]
-          =title.html_safe
-      .links
-        .link
-          =link_to('LATEST', latest_path, :class=>'latest')
-        .link
-          =link_to('ARCHIVE', archive_path)
+  =render :partial=>'layouts/header'
   #scene
     .scene_body
       =yield
-    .spacer
-    #footer
-      =link_to('ABOUT', about_path)
-      =link_to('CONTACT', contact_path)
-      =link_to('PRIVACY', privacy_path)
-      =link_to('TERMS', terms_path)
-
-  #subscribe
-    =link_to image_tag('/assets/icons/twitter.png'), "http://www.twitter.com"
-    =link_to image_tag('/assets/icons/facebook.png'), "http://www.facebook.com/pages/"
-    =link_to image_tag('/assets/icons/rss.png'), feed_path
+    =render :partial=>'layouts/footer'
+  =render :partial=>'layouts/subscribe'
