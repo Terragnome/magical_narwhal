@@ -38,16 +38,14 @@ gem 'haml-rails'
 #Tags
 gem 'acts-as-taggable-on'
 
-#Password
-gem 'bcrypt-ruby'
-
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.1.2'
+gem 'bcrypt-ruby', '~> 3.1.2'
+gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 
 # Use unicorn as the app server
 gem 'unicorn'
