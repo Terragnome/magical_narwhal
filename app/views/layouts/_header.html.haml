@@ -4,11 +4,8 @@
       =image_tag('/assets/avatars/mikey.png')
       .title
         -title=""
-        -@app_title_components.count.times do |i|
-          -if i%2 == 0
-            -title << "<span style='color:#0099cc;'>#{@app_title_components[i]}</span>"
-          -else
-            -title << @app_title_components[i]
+        -header.count.times do |i|
+          -title << (i%2 == 0 ? "<span style='color:#0099cc;'>#{header[i]}</span>" : header[i])
         =title.html_safe
     .links
       .link
