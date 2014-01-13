@@ -55,9 +55,12 @@
 			width: 64px;
 		}
 		.info_section{
+			.link{
+				cursor: pointer;
+			}
+			
 			margin: 2px 0px 0px 0px;
 			.info{
-				cursor: pointer;
 				display: inline-block;
 				margin: 0px 30px 0px 0px;
 				img{

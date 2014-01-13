@@ -6,13 +6,13 @@
       =post.title.upcase
     .info_section
       =link_to(user_path(post.user.nickname)) do
-        .info
+        .info.link
           =image_tag('/assets/icons/info.png')
           .text
             =post.user.nickname
       .info
         =image_tag('/assets/icons/calendar.png')
-        .text.date
+        .text
           =post.display_time
   %p.body
     =post.body.html_safe
