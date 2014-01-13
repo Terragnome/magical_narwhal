@@ -5,18 +5,24 @@ class PostsController < ApplicationController
   end
 
   def index_by_tag
-    @posts=Post.active.tagged_with(params[:tag])
+    tag=params[:tag]
+    @posts=Post.active.tagged_with(tag)
+    @tags=@posts.tag_counts_on(:tags)
+
     render :index
   end
 
   def index_by_user
     user=User.find_by_nickname(params[:nickname])
-    @posts=Post.active.find(:all, :conditions=>['user_id=?', user.id], :order=>'id DESC')
+    @posts=user.posts.active
+    @tags=@posts.tag_counts_on(:tags)
+
     render :index
   end
 
   def index
-    @posts=Post.active.where(:active=>true).reverse
+    @posts=Post.active
+    @tags=@posts.tag_counts_on(:tags)
   end
 
   def show
