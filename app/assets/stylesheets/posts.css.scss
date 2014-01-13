@@ -19,6 +19,7 @@
 		margin: 40px 0px 0px 0px;
 		.entry{
 			cursor: pointer;
+			display: inline-block;
 			padding: 5px 20px 10px 20px;
 			&:hover{
 				background-color: #0099cc;

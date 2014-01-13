@@ -1,3 +1,4 @@
--tag_cloud(tag_cloud.order(:name), %w(css1 css2 css3 css4)) do |tag, css_class|
-  .tag
-    = link_to(tag.name, tag_archive_path(tag.name), :class => css_class)
+.tag_cloud
+  -tag_cloud(tag_cloud.order(:name), %w(css1 css2 css3 css4)) do |tag, css_class|
+    .tag
+      = link_to(tag.name, tag_archive_path(tag.name), :class => css_class)

@@ -1,12 +1,11 @@
 .index
   -if @tags.count>0
-    .tag_cloud
-      =render :partial=>'tag_cloud', :object=>@tags
+    =render :partial=>'tag_cloud', :object=>@tags
     .spacer
   .posts
     -@posts.reverse.each do |p|
       =link_to post_path(p.id) do
-        .entry.inline{:class=>"#{(p.id%10==0 ? 'black' : p.id%2==0 ? 'gray' : 'white')}"}
+        .entry{:class=>"#{(p.id%10==0 ? 'black' : p.id%2==0 ? 'gray' : 'white')}"}
           .title
             =p.title.upcase
           .date
