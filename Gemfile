@@ -46,6 +46,7 @@ end
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.1.2'
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
+gem 'rails_admin_tag_list'
 
 # Use unicorn as the app server
 gem 'unicorn'
