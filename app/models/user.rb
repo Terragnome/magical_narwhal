@@ -1,7 +1,5 @@
 class User < ActiveRecord::Base
   EMAIL_REGEX=/\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
-  
-  has_many :posts, dependent: :destroy
 
   validates_presence_of :nickname
   validates :nickname, length:{minimum: 3}
@@ -14,5 +12,10 @@ class User < ActiveRecord::Base
   validates_presence_of :name
   validates :name, length:{minimum: 3}
   
+  has_secure_password
+  validates :password, :presence => { :on => :create }
+
+  has_many :posts, dependent: :destroy
+
   acts_as_tagger
 end
