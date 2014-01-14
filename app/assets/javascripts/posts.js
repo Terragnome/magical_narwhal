@@ -17,10 +17,7 @@ function initFBComments(){
 	var s = 'script';
 	var id = 'facebook-jssdk';
 	var js, fjs = d.getElementsByTagName(s)[0];
-	if (d.getElementById(id)){
-		console.log("TRACE SKIP");
-		return;
-	}
+	if (d.getElementById(id)) return;
  	js = d.createElement(s); js.id = id;
   	js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=696404120390063";
   	fjs.parentNode.insertBefore(js, fjs);
