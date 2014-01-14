@@ -1,6 +1,6 @@
 class PostsController < ApplicationController  
   def latest
-    @post=Post.last
+    @post=Post.active.last
     render :show
   end
 

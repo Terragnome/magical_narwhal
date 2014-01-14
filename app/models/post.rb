@@ -1,6 +1,8 @@
 class Post < ActiveRecord::Base
   belongs_to :user
 
+  before_validation :set_posted_at
+
   scope :active, -> {where(active:true)}
   
   acts_as_taggable
@@ -13,6 +15,10 @@ class Post < ActiveRecord::Base
     @@newest ||= Post.active.last
   end
 
+  def set_posted_at
+    self.posted_at = Time.now if self.active && self.posted_at.blank?
+  end
+
   def older
     @older ||= Post.active.where(['id<?', id]).last
   end
@@ -22,7 +28,7 @@ class Post < ActiveRecord::Base
   end
 
   def date
-    created_at.to_date
+    posted_at ? posted_at.to_date : created_at.to_date
   end
   
   def display_time
