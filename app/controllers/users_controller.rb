@@ -10,5 +10,7 @@ class UsersController < ApplicationController
     rescue
       redirect_to latest_path and return
     end
+    
+    @current_user=current_user
   end
 end

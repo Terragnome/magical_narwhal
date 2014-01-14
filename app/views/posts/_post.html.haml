@@ -14,6 +14,10 @@
         =image_tag('/assets/icons/calendar.png')
         .text
           =post.display_time
+      -if user_signed_in? && current_user == post.user
+        .info
+          .text.link
+            =link_to('EDIT', rails_admin.edit_path(model_name:'post', id:post.id))
   %p.body
     =post.body.html_safe
   .spacer

@@ -8,6 +8,7 @@ class ApplicationController < ActionController::Base
   def set_constants
     @app_title_components=['HUAI', 'TZER']
     @app_title=@app_title_components.join('')
+
     @primary_user=User.first
   end
 end
