@@ -3,20 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .index{
-	.tag_cloud{
-		margin:40px 0px 25px 0px;
-		.tag{
-			display: inline-block;
-			margin:0px 5px 0px 5px;
-		}
-		.css1 { font-size: 1.0em; }
-		.css2 { font-size: 1.2em; }
-		.css3 { font-size: 1.4em; }
-		.css4 { font-size: 1.6em; }
-	}
-
 	.posts{
-		margin: 40px 0px 0px 0px;
+		margin: 40px 0px 25px 0px;
+
 		.entry{
 			cursor: pointer;
 			display: inline-block;
@@ -53,6 +42,10 @@
 			cursor: inherit;
 			font-size: 14px;
 		}
+		.css1 { font-size: 1.0em; }
+		.css2 { font-size: 1.2em; }
+		.css3 { font-size: 1.4em; }
+		.css4 { font-size: 1.6em; }
 	}
 }
 
