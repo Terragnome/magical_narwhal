@@ -1,4 +1,8 @@
 class User < ActiveRecord::Base
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable, :validatable
   EMAIL_REGEX=/\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
 
   validates_presence_of :nickname
@@ -12,7 +16,7 @@ class User < ActiveRecord::Base
   validates_presence_of :name
   validates :name, length:{minimum: 3}
   
-  has_secure_password
+  #has_secure_password
   validates :password, :presence => { :on => :create }
 
   has_many :posts, dependent: :destroy

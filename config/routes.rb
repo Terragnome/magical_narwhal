@@ -1,4 +1,5 @@
 MagicalNarwhal::Application.routes.draw do
+  devise_for :users
   mount RailsAdmin::Engine => '/comu', :as => 'rails_admin'
   get 'feed' => 'subscribe#feed'
 

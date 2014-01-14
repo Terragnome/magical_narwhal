@@ -62,6 +62,12 @@ GEM
       execjs
     coffee-script-source (1.6.3)
     daemons (1.1.9)
+    devise (3.2.2)
+      bcrypt-ruby (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
     erubis (2.7.0)
     eventmachine (1.0.3)
     execjs (2.0.2)
@@ -106,6 +112,7 @@ GEM
     net-ssh (2.7.0)
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
+    orm_adapter (0.5.0)
     polyglot (0.3.3)
     rack (1.5.2)
     rack-pjax (0.7.0)
@@ -180,6 +187,8 @@ GEM
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
+    warden (1.2.3)
+      rack (>= 1.0)
 
 PLATFORMS
   ruby
@@ -189,6 +198,7 @@ DEPENDENCIES
   bcrypt-ruby (~> 3.1.2)
   capistrano
   coffee-rails (~> 4.0.0)
+  devise
   haml
   haml-rails
   jbuilder (~> 1.2)
