@@ -16,6 +16,10 @@
           =image_tag('/assets/icons/twitter.png')
           .text
             ="@#{user.twitter_id}"
+    -if user_signed_in? && user == current_user
+      .info
+        .text
+          =link_to('EDIT', rails_admin.edit_path(model_name:'user', id:user.id))
   %p.body
     =user.profile
   .navigation
