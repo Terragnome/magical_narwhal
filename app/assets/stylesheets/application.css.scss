@@ -57,8 +57,10 @@
 	src: url('/fonts/stalemate.regular.ttf');
 }
 
-$header_height: 175px;
 $header_width: 640px;
+$header_height: 175px;
+$logo_img_width: 310px;
+$logo_img_height: 150px;
 a{
 	color: #0099cc;
 	cursor: pointer;
@@ -225,12 +227,10 @@ table{
 	width: 100%;
 	z-index: 2;
 
-	$logo_img_height: 150px;
 	.logo{
 		cursor:inherit;
 		z-index: 2;
 		img{
-			float: left;
 			height: #{$logo_img_height};
 			margin: #{$header_height - $logo_img_height} 0px 0px 0px;
 			pointer-events: none;
@@ -243,6 +243,7 @@ table{
 			font-size: 120px;
 			position: absolute;
 			top: 58px;
+			left: #{$logo_img_width};
 			z-index: 3;
 		}
 	}
