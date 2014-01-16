@@ -20,6 +20,7 @@ function onReady(){
 	applicationIsReady = true;
 
 	//Initialize parallax
+	/*
 	$('#scene').parallax({
 	  calibrateX: true,
 	  calibrateY: true,
@@ -28,6 +29,7 @@ function onReady(){
 	  scalarX: 3,
 	  scalarY: 3,
 	});
+	*/
 }
 
 $(onReady);

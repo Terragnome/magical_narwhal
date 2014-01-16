@@ -232,7 +232,7 @@ table{
 		z-index: 2;
 		img{
 			height: #{$logo_img_height};
-			margin: #{$header_height - $logo_img_height} 0px 0px 0px;
+			margin: #{$header_height - $logo_img_height +1} 0px 0px 0px;
 			pointer-events: none;
 		}
 		.title{
