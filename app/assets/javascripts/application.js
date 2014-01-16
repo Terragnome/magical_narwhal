@@ -11,25 +11,15 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
+//= require turbolinks
 //= require_tree .
 
 var applicationIsReady = false;
 function onReady(){
 	if(applicationIsReady) return;
 	applicationIsReady = true;
-
-	//Initialize parallax
-	/*
-	$('#scene').parallax({
-	  calibrateX: true,
-	  calibrateY: true,
-	  invertX: true,
-	  invertY: true,
-	  scalarX: 3,
-	  scalarY: 3,
-	});
-	*/
 }
 
 $(onReady);
