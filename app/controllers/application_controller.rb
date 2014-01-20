@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   before_filter :set_constants
 
   def set_constants
-    @app_title_components=['HUAI', 'TZER']
+    @app_title_components=['1', '0']
     @app_title=@app_title_components.join('')
     @app_description='._.'
 
