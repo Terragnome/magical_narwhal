@@ -57,10 +57,13 @@
 	src: url('/fonts/stalemate.regular.ttf');
 }
 
-$header_width: 600px;
+$header_width: 320px;
 $header_height: 175px;
 $logo_img_width: 310px;
 $logo_img_height: 150px;
+
+$scene_body_margin_x: 20px;
+$scene_body_margin_y: 91px;
 a{
 	color: #0099cc;
 	cursor: pointer;
@@ -291,12 +294,12 @@ table{
 		display: inline-block;
 		margin: 30px 0px 30px 0px;
 		max-width: 960px;
-		min-height: calc(100% - 91px);
-		min-height: -moz-calc(100% - 91px);
-		min-height: -webkit-calc(100% - 91px);
-		width: calc(100% - 180px);
-		width: -moz-calc(100% - 180px);
-		width: -webkit-calc(100% - 180px);
+		min-height: calc(100% - #{$scene_body_margin_y});
+		min-height: -moz-calc(100% - #{$scene_body_margin_y});
+		min-height: -webkit-calc(100% - #{$scene_body_margin_y});
+		width: calc(100% - #{$scene_body_margin_x});
+		width: -moz-calc(100% - #{$scene_body_margin_x});
+		width: -webkit-calc(100% - #{$scene_body_margin_x});
 		text-align: left;
 		
 	}
