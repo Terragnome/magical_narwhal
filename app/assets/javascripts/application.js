@@ -16,11 +16,9 @@
 //= require turbolinks
 //= require_tree .
 
-var applicationIsReady = false;
-function onReady(){
-	if(applicationIsReady) return;
-	applicationIsReady = true;
-}
+var Application = Application || {};
 
-$(onReady);
-$(document).on('page:load', onReady);
+Application.OnReady = function(){
+};
+
+$(Application.OnReady);

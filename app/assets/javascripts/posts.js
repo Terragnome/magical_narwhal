@@ -1,29 +1,15 @@
-var postsIsReady = false;
-function onReady(){
-	if(postsIsReady) return;
-	postsIsReady = true;
+var Post = Post || {};
 
+Post.OnReady = function(){
 	//Create facebook comment section
-	initFBComments();
-	$('.comment_button').each(toggleFBComments);
+	$('.comment_button').each(Post.ToggleFBComments);
 
 	//Share button
 	var shareButton = $('.share_button');
-	if(shareButton != null) shareButton.click(toggleShare);
+	if(shareButton != null) shareButton.click(Post.ToggleShare);
 }
 
-function initFBComments(){
-	var d = document;
-	var s = 'script';
-	var id = 'facebook-jssdk';
-	var js, fjs = d.getElementsByTagName(s)[0];
-	if (d.getElementById(id)) return;
- 	js = d.createElement(s); js.id = id;
-  	js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=696404120390063";
-  	fjs.parentNode.insertBefore(js, fjs);
-}
-
-function toggleFBComments(){
+Post.ToggleFBComments = function(){
 	$(this).click(function(){
 		var commentSection = $(this).parent().parent().find('.fb-comments');
 
@@ -37,9 +23,9 @@ function toggleFBComments(){
 	});
 }
 
-function toggleShare(){
+Post.ToggleShare = function(){
 	alert('Share!');
 }
 
-$(onReady);
-$(document).on('page:load', onReady);
+
+$(Post.OnReady);
