@@ -63,7 +63,7 @@ $logo_img_width: 310px;
 $logo_img_height: 150px;
 
 $scene_body_margin_x: 20px;
-$scene_body_margin_y: 91px;
+$scene_body_margin_y: 61px;
 a{
 	color: #0099cc;
 	cursor: pointer;
@@ -222,21 +222,21 @@ table{
 	z-index: 2;
 
 	.logo{
+		cursor:inherit;
+		overflow: hidden;
 		z-index: 2;
 		img{
-			cursor: pointer;
 			height: #{$logo_img_height};
 			margin: #{$header_height - $logo_img_height +1} 0px 0px 0px;
 			position: absolute;
+			pointer-events: none;
 		}
 		.title{
 			color: #ffffff;
+			cursor: inherit;
 			font-family: 'LeagueGothic';
 			font-size: 120px;
-			left: #{$logo_img_width};
-			overflow: hidden;
-			position: relative;
-			top: 58px;
+			margin: 58px 0px 0px #{$logo_img_width};
 			z-index: 3;
 		}
 	}
@@ -281,7 +281,7 @@ table{
 	z-index: 1;
 	.scene_body{
 		display: inline-block;
-		margin: 30px 0px 30px 0px;
+		margin: 0px 0px 30px 0px;
 		max-width: 960px;
 		min-height: calc(100% - #{$scene_body_margin_y});
 		min-height: -moz-calc(100% - #{$scene_body_margin_y});

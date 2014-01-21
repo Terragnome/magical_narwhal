@@ -1,14 +1,14 @@
 #header
-  .logo
-    =link_to(root_path) do
+  =link_to(root_path) do
+    .logo
       =image_tag('/assets/avatars/mikey.png')
-    .links
-      .link
-        =link_to('LATEST', latest_path, :class=>'latest')
-      .link
-        =link_to('ARCHIVE', archive_path)
-    .title
-      -title=""
-      -header.count.times do |i|
-        -title << (i%2 == 0 ? "<span style='color:#0099cc;'>#{header[i]}</span>" : header[i])
-      =title.html_safe
+      .links
+        .link
+          =link_to('LATEST', latest_path, :class=>'latest')
+        .link
+          =link_to('ARCHIVE', archive_path)
+      .title
+        -title=""
+        -header.count.times do |i|
+          -title << (i%2 == 0 ? "<span style='color:#0099cc;'>#{header[i]}</span>" : header[i])
+        =title.html_safe
