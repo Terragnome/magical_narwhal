@@ -4,9 +4,11 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   before_filter :set_constants
+  
+  has_mobile_fu false
 
   def set_constants
-    @app_title_components=['1', '0']
+    @app_title_components=['HUAI', 'TZER']
     @app_title=@app_title_components.join('')
     @app_description='._.'
 
