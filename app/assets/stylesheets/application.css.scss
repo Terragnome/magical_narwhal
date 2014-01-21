@@ -223,21 +223,20 @@ table{
 
 	.logo{
 		cursor:inherit;
+		overflow: hidden;
 		z-index: 2;
 		img{
 			height: #{$logo_img_height};
 			margin: #{$header_height - $logo_img_height +1} 0px 0px 0px;
+			position: absolute;
 			pointer-events: none;
 		}
 		.title{
 			color: #ffffff;
 			cursor: inherit;
-			display: inline-block;
 			font-family: 'LeagueGothic';
 			font-size: 120px;
-			position: absolute;
-			top: 58px;
-			left: #{$logo_img_width};
+			margin: 58px 0px 0px #{$logo_img_width};
 			z-index: 3;
 		}
 	}
