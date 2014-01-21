@@ -2,30 +2,29 @@ var Post = Post || {};
 
 Post.OnReady = function(){
 	//Create facebook comment section
-	$('.comment_button').each(Post.ToggleFBComments);
+	$('.comment_button').each(function(){ $(this).click(Post.OnCommentButton); });
 
 	//Share button
 	var shareButton = $('.share_button');
-	if(shareButton != null) shareButton.click(Post.ShowShare);
+	if(shareButton != null) shareButton.click(Post.OnShareButton);
 }
 
-Post.ToggleFBComments = function(){
-	$(this).click(function(){
-		var commentSection = $(this).parent().parent().find('.fb-comments');
-		Application.ToggleObjDisplay(commentSection);
-	});
+Post.OnCommentButton = function(){
+	var commentSection = $(this).parent().parent().find('.fb-comments');
+	Application.ToggleObjDisplay(commentSection);
 }
 
-Post.ShowShare = function(){ Post.SetShare(true); }
-Post.HideShare = function(){ Post.SetShare(false); console.log('here'); }
-Post.SetShare = function(isOn){
+Post.OnShareButton = function(){ Post.ShowShare($(this).parent().parent(), true); }
+Post.ShowShare = function(postObj){ Post.SetShare(postObj, true); }
+Post.HideShare = function(postObj){ Post.SetShare(postObj, false); }
+Post.SetShare = function(postObj, isOn){
 	var blocker = Application.GetBlocker();
-	var shareSection = $(this).parent().parent().find('.share');
+	var shareSection = postObj.find('.share');
 
 	if(isOn){
-		Application.SetBlockerDisplay(true);
+		Application.SetBlockerDisplay(blocker, true);
+		blocker.one('click', function(){ Post.HideShare(postObj); });
 		Application.SetObjDisplay(shareSection, true);
-		blocker.one('click', Post.HideShare);
 	}else{
 		Application.SetBlockerDisplay(false);
 		Application.SetObjDisplay(shareSection, false);

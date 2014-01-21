@@ -215,11 +215,18 @@ table{
 	}
 }
 
+#popups{
+	left: 0px;
+	position: absolute;
+	top: 0px;
+	z-index: 100;
+}
+
 #blocker{
-	background-color: #ffffff;
+	background-color: #000000;
 	display: none;
 	height: 100%;
-	opacity: 0.8;
+	opacity: 0.75;
 	position: absolute;
 	width: 100%;
 	z-index: 99;
@@ -234,19 +241,18 @@ table{
 
 	.logo{
 		overflow: hidden;
-		z-index: 2;
 		img{
 			cursor: pointer;
 			height: #{$logo_img_height};
 			margin: #{$header_height - $logo_img_height +1} 0px 0px 0px;
 			position: absolute;
+			z-index: 3;
 		}
 		.title{
 			color: #ffffff;
 			font-family: 'LeagueGothic';
 			font-size: 120px;
 			margin: 58px 0px 0px #{$logo_img_width +10};
-			z-index: 3;
 		}
 	}
 	.links{

@@ -31,9 +31,18 @@ Application.SetObjDisplay = function(obj, isOn){
 
 Application.GetBlocker = function(){ return $('#blocker'); }
 Application.ToggleBlocker = function(){ Application.SetBlockerDisplay(Application.GetBlocker(), (obj.css('display')=='none')); }
-Application.SetBlockerDisplay = function(isOn){ Application.SetObjDisplay(Application.GetBlocker(), isOn); }
+Application.SetBlockerDisplay = function(isOn){
+	var blocker = Application.GetBlocker();
+	
+	if(isOn){
+		blocker.fadeIn('fast', function(){ Application.SetObjDisplay(blocker, true); });
+	}else{
+		blocker.fadeOut('fast', function(){ Application.SetObjDisplay(blocker, false); });
+	}
+
+}
 
 Application.OnReady = function(){
-};
+}
 
 $(Application.OnReady);

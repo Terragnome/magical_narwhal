@@ -117,12 +117,16 @@ $share_height: 20px;
 			float: none;
 		}
 	}
-}
-
-.share{
-	background-color: #808080;	
-	height: 100%;
-	width: 100%;
+	.share{
+		background-color: #808080;	
+		display: none;
+		height: 100px;
+		left: 100px;
+		position: absolute;
+		top: 100px;
+		width: 300px;
+		z-index: 1000;
+	}
 }
 
 .navigation{
