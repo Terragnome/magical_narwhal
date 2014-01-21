@@ -96,20 +96,26 @@
 	}
 	.actions{
 		margin: 3px 0px 5px 0px;
+		min-height: 25px;
+		text-align: right;
 		a{
 			display: inline-block;
+			float: left;
 			margin: 0px 10px 0px 0px;
 		}
 	}
 	.tags{
+		display: inline-block;
 		font-family: 'Oswald';
 		font-weight: bold;
+		text-align: right;
 		.tags_title{
 			display: inline-block;
 			margin: 0px 10px 0px 0px;
 		}
 		a{
 			display: inline-block;
+			float: none;
 		}
 	}
 }
