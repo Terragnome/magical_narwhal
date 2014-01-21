@@ -20,6 +20,9 @@ $logo_img_height: 150px;
 $scene_body_margin_x: 20px;
 $scene_body_margin_y: 91px;
 
+$share_width: 260px;
+$share_height: 80px;
+
 @font-face{
 	font-family: 'CrimsonText';
 	src: url('/fonts/crimson/CrimsonText-Roman.ttf');
@@ -208,6 +211,21 @@ table{
 	font-family: 'Lato';
 }
 
+.share{
+	background-color: #ffffff;
+	box-shadow: 0px 3px 20px #808080;
+	display: none;
+	height: #{$share_height};
+	padding: 10px 15px 10px 15px;
+	position: absolute;
+	width: #{$share_width};
+	z-index: 1000;
+
+	a{
+		margin: 0px 5px 0px 5px;
+	}
+}
+
 .navigation{
 	a{
 		font-size: 28px;
@@ -296,7 +314,7 @@ table{
 	z-index: 1;
 	.scene_body{
 		display: inline-block;
-		margin: 30px 0px 30px 0px;
+		margin: 0px 0px 30px 0px;
 		max-width: 960px;
 		min-height: calc(100% - #{$scene_body_margin_y});
 		min-height: -moz-calc(100% - #{$scene_body_margin_y});
