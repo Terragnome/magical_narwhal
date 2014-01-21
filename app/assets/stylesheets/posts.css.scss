@@ -1,6 +1,5 @@
-// Place all the styles related to the posts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+$share_width: 300px;
+$share_height: 20px;
 
 .index{
 	.posts{
@@ -118,6 +117,12 @@
 			float: none;
 		}
 	}
+}
+
+.share{
+	background-color: #808080;	
+	height: 100%;
+	width: 100%;
 }
 
 .navigation{

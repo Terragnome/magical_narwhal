@@ -12,6 +12,14 @@
  *= require_tree .
  */
 
+$header_width: 320px;
+$header_height: 175px;
+$logo_img_width: 310px;
+$logo_img_height: 150px;
+
+$scene_body_margin_x: 20px;
+$scene_body_margin_y: 91px;
+
 @font-face{
 	font-family: 'CrimsonText';
 	src: url('/fonts/crimson/CrimsonText-Roman.ttf');
@@ -57,13 +65,6 @@
 	src: url('/fonts/stalemate.regular.ttf');
 }
 
-$header_width: 320px;
-$header_height: 175px;
-$logo_img_width: 310px;
-$logo_img_height: 150px;
-
-$scene_body_margin_x: 20px;
-$scene_body_margin_y: 91px;
 a{
 	color: #0099cc;
 	cursor: pointer;
@@ -212,6 +213,16 @@ table{
 		font-size: 28px;
 		font-weight: bold;
 	}
+}
+
+#blocker{
+	background-color: #ffffff;
+	display: none;
+	height: 100%;
+	opacity: 0.8;
+	position: absolute;
+	width: 100%;
+	z-index: 99;
 }
 
 #header{

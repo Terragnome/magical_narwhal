@@ -18,6 +18,21 @@
 
 var Application = Application || {};
 
+Application.ToggleObjDisplay = function(obj){ Application.SetObjDisplay(obj, (obj.css('display')=='none')); }
+Application.SetObjDisplay = function(obj, isOn){
+	if(obj != null){
+		if(isOn){
+			obj.css('display', 'block');
+		}else{
+			obj.css('display', 'none');
+		}
+	}
+}
+
+Application.GetBlocker = function(){ return $('#blocker'); }
+Application.ToggleBlocker = function(){ Application.SetBlockerDisplay(Application.GetBlocker(), (obj.css('display')=='none')); }
+Application.SetBlockerDisplay = function(isOn){ Application.SetObjDisplay(Application.GetBlocker(), isOn); }
+
 Application.OnReady = function(){
 };
 

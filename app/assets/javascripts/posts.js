@@ -6,26 +6,30 @@ Post.OnReady = function(){
 
 	//Share button
 	var shareButton = $('.share_button');
-	if(shareButton != null) shareButton.click(Post.ToggleShare);
+	if(shareButton != null) shareButton.click(Post.ShowShare);
 }
 
 Post.ToggleFBComments = function(){
 	$(this).click(function(){
 		var commentSection = $(this).parent().parent().find('.fb-comments');
-
-		if(commentSection != null){
-			if( commentSection.css('display') == 'none' ){
-				commentSection.css('display', 'block');
-			}else{
-				commentSection.css('display', 'none');
-			}
-		}
+		Application.ToggleObjDisplay(commentSection);
 	});
 }
 
-Post.ToggleShare = function(){
-	alert('Share!');
-}
+Post.ShowShare = function(){ Post.SetShare(true); }
+Post.HideShare = function(){ Post.SetShare(false); console.log('here'); }
+Post.SetShare = function(isOn){
+	var blocker = Application.GetBlocker();
+	var shareSection = $(this).parent().parent().find('.share');
 
+	if(isOn){
+		Application.SetBlockerDisplay(true);
+		Application.SetObjDisplay(shareSection, true);
+		blocker.one('click', Post.HideShare);
+	}else{
+		Application.SetBlockerDisplay(false);
+		Application.SetObjDisplay(shareSection, false);
+	}
+}
 
 $(Post.OnReady);
