@@ -314,7 +314,7 @@ table{
 	z-index: 1;
 	.scene_body{
 		display: inline-block;
-		margin: 0px 0px 30px 0px;
+		margin: 30px 0px 30px 0px;
 		max-width: 960px;
 		min-height: calc(100% - #{$scene_body_margin_y});
 		min-height: -moz-calc(100% - #{$scene_body_margin_y});
