@@ -10,7 +10,7 @@
   %body
     #fb-root
     =render :partial=>'layouts/header', :object=>@app_title_components
-    #scene{:style=>"overflow:#{in_mobile_view? ? 'visible' : 'scroll'};"}
+    #scene{:style=>"overflow:#{is_mobile_device? ? 'visible' : 'scroll'};"}
       .scene_body
         =yield
       .spacer

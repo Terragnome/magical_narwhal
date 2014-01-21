@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
   before_filter :set_constants
   
-  has_mobile_fu
+  has_mobile_fu false
 
   def set_constants
     @app_title_components=['HUAI', 'TZER']
