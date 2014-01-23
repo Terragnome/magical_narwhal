@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
   def index
     @users=User.all
+
+    respond_to do |format|
+      format.html{render action: 'index'}
+    end
   end
   
   def show
@@ -10,7 +14,9 @@ class UsersController < ApplicationController
     rescue
       redirect_to latest_path and return
     end
-    
-    @current_user=current_user
+
+    respond_to do |format|
+      format.html{render action: 'show'}
+    end
   end
 end

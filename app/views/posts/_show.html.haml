@@ -1,0 +1,8 @@
+.show
+  =render partial:'post', object:@post
+-if @post.older || @post.newer
+  .navigation
+    -if @post.older
+      =link_to("PREVIOUS", post_url(@post.older.id), :remote=>true)
+    -if @post.newer
+      =link_to("NEXT", post_url(@post.newer.id), :remote=>true)

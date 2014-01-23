@@ -6,7 +6,7 @@
       .link
         =link_to('LATEST', latest_path, :class=>'latest')
       .link
-        =link_to('ARCHIVE', archive_path)
+        =link_to('ARCHIVE', archive_path, :remote=>true)
     .title
       -title=""
       -header.count.times do |i|

@@ -1,8 +1,1 @@
-.show
-  =render partial:'post', object:@post
--if @post.older || @post.newer
-  .navigation
-    -if @post.older
-      =link_to("PREVIOUS", post_path(@post.older.id))
-    -if @post.newer
-      =link_to("NEXT", post_path(@post.newer.id))
+=render :partial=>'show'

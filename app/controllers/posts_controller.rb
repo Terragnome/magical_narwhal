@@ -1,7 +1,11 @@
 class PostsController < ApplicationController  
   def latest
     @post=Post.active.last
-    render :show
+    
+    respond_to do |format|
+      format.html{render action: 'show'}
+      format.js
+    end
   end
 
   def index_by_tag
@@ -9,7 +13,10 @@ class PostsController < ApplicationController
     @posts=Post.active.tagged_with(tag)
     @tags=@posts.tag_counts_on(:tags)
 
-    render :index
+    respond_to do |format|
+      format.html{render action: 'index'}
+      format.js
+    end
   end
 
   def index_by_user
@@ -17,12 +24,20 @@ class PostsController < ApplicationController
     @posts=user.posts.active
     @tags=@posts.tag_counts_on(:tags)
 
-    render :index
+    respond_to do |format|
+      format.html{render action: 'index'}
+      format.js
+    end
   end
 
   def index
     @posts=Post.active
     @tags=@posts.tag_counts_on(:tags)
+    
+    respond_to do |format|
+      format.html{render action: 'index'}
+      format.js
+    end
   end
 
   def show
@@ -30,6 +45,11 @@ class PostsController < ApplicationController
       @post=Post.active.find(params[:id])
     rescue
       redirect_to latest_path and return
+    end
+
+    respond_to do |format|
+      format.html{render action: 'show'}
+      format.js
     end
   end
 end
