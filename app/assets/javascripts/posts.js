@@ -1,12 +1,9 @@
 var Post = Post || {};
 
-Post.OnReady = function(){
-	//Create facebook comment section
+Post.Init = function(){
+	FB.XFBML.parse();
 	$('.comment_button').each(function(){ $(this).click(Post.OnCommentButton); });
-
-	//Share button
-	var shareButton = $('.share_button');
-	if(shareButton != null) shareButton.click(Post.OnShareButton);
+	$('.share_button').each(function(){ $(this).click(Post.OnShareButton); });
 }
 
 Post.OnCommentButton = function(){
@@ -30,5 +27,3 @@ Post.SetShare = function(postObj, isOn){
 		Application.SetObjDisplay(shareSection, false);
 	}
 }
-
-$(Post.OnReady);
