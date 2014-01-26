@@ -18,6 +18,14 @@
 
 var Application = Application || {};
 
+Application.Transition = function(){
+	$('#scene').scrollTop(0);
+	$('#scene').css('opacity', 0);
+	$('#scene').animate({
+		opacity: 1
+    }, 250);
+}
+
 Application.ToggleObjDisplay = function(obj){ Application.SetObjDisplay(obj, (obj.css('display')=='none')); }
 Application.SetObjDisplay = function(obj, isOn){
 	if(obj != null){
@@ -43,6 +51,7 @@ Application.SetBlockerDisplay = function(isOn){
 }
 
 Application.OnReady = function(){
+	Application.Transition();
 }
 
 $(Application.OnReady);

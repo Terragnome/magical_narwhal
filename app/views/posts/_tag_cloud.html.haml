@@ -1,5 +1,5 @@
 .posts
   -tag_cloud(tag_cloud.order(:name), %w(css1 css2 css3 css4)) do |tag, css_class|
-    =link_to tag_archive_path(tag.name) do
+    =link_to tag_archive_path(tag.name), :remote=>true do
       .entry.black{:class=>css_class}
         =tag.name.upcase

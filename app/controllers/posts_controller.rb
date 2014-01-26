@@ -4,7 +4,7 @@ class PostsController < ApplicationController
     
     respond_to do |format|
       format.html{render action: 'show'}
-      format.js
+      format.js{render action: 'show'}
     end
   end
 
@@ -15,7 +15,7 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       format.html{render action: 'index'}
-      format.js
+      format.js{render action: 'index'}
     end
   end
 
@@ -26,7 +26,7 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       format.html{render action: 'index'}
-      format.js
+      format.js{render action: 'index'}
     end
   end
 

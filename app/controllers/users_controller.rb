@@ -4,6 +4,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       format.html{render action: 'index'}
+      format.js
     end
   end
   
@@ -17,6 +18,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       format.html{render action: 'show'}
+      format.js
     end
   end
 end

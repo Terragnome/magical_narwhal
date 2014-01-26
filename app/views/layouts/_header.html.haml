@@ -1,10 +1,10 @@
 #header
   .logo
-    =link_to(root_path) do
+    =link_to(root_path, :remote=>true) do
       =image_tag('/assets/avatars/mikey.png')
     .links
       .link
-        =link_to('LATEST', latest_path, :class=>'latest')
+        =link_to('LATEST', latest_path, :class=>'latest', :remote=>true)
       .link
         =link_to('ARCHIVE', archive_path, :remote=>true)
     .title
