@@ -4,13 +4,12 @@ Post.Init = function(){
 	FB.XFBML.parse();
 	$('.comment_button').each(function(){ $(this).click(Post.OnCommentButton); });
 	$('.share_button').each(function(){ $(this).click(Post.OnShareButton); });
-	
 	Post.Focus();
 }
 
 Post.Focus = function(){
 	$('#scene').animate({
-        scrollTop: y
+        scrollTop: 0
     }, 10);
 }
 
