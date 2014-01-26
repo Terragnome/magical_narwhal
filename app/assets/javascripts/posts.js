@@ -4,6 +4,14 @@ Post.Init = function(){
 	FB.XFBML.parse();
 	$('.comment_button').each(function(){ $(this).click(Post.OnCommentButton); });
 	$('.share_button').each(function(){ $(this).click(Post.OnShareButton); });
+	
+	Post.Focus();
+}
+
+Post.Focus = function(){
+	$('#scene').animate({
+        scrollTop: y
+    }, 10);
 }
 
 Post.OnCommentButton = function(){
@@ -12,8 +20,12 @@ Post.OnCommentButton = function(){
 }
 
 Post.OnShareButton = function(){ Post.ShowShare($(this).parent().parent(), true); }
-Post.ShowShare = function(postObj){ Post.SetShare(postObj, true); }
-Post.HideShare = function(postObj){ Post.SetShare(postObj, false); }
+Post.ShowShare = function(postObj){
+	Post.SetShare(postObj, true);
+}
+Post.HideShare = function(postObj){
+	Post.SetShare(postObj, false);
+}
 Post.SetShare = function(postObj, isOn){
 	var blocker = Application.GetBlocker();
 	var shareSection = postObj.find('.share');
