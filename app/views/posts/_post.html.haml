@@ -32,7 +32,7 @@
         .tags_title
           TAGS
         -post.tag_list.each do |tag|
-          =link_to(tag.upcase, tag_archive_path(tag), 'data-push'=>true)
+          =link_to(tag.upcase, tag_archive_path(tag), :class=>'tag', 'data-push'=>true)
   .spacer
     .fb-comments{'data-href'=>post_url(post.id), 'data-numposts'=>'5', 'data-colorscheme'=>'light', :style=>'display:none;'}
 
