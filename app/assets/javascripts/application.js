@@ -19,14 +19,6 @@
 
 var Application = Application || {};
 
-Application.Transition = function(){
-	$('#scene').scrollTop(0);
-	$('#scene').css('opacity', 0);
-	$('#scene').animate({
-		opacity: 1
-    }, 250);
-}
-
 Application.ToggleObjDisplay = function(obj){ Application.SetObjDisplay(obj, (obj.css('display')=='none')); }
 Application.SetObjDisplay = function(obj, isOn){
 	if(obj != null){
@@ -52,13 +44,23 @@ Application.SetBlockerDisplay = function(isOn){
 }
 
 Application.OnReady = function(){
-	window.wiselinks = new Wiselinks($('#scene_body'))
+	window.wiselinks = new Wiselinks($('#scene_body'));
 }
 
-Application.OnAjax = function(){
-	Application.Transition();
+Application.OnAjaxStart = function(){
+	$('#scene').animate({
+		opacity: 0
+    }, 250);
+}
+Application.OnAjaxComplete = function(){
+	$('#scene').css('opacity', 0);
+	$('#scene').scrollTop(0);
+	$('#scene').animate({
+		opacity: 1
+    }, 250);
 	FB.XFBML.parse();
 }
 
 $(Application.OnReady);
-$(document).ajaxComplete(Application.OnAjax);
+$(document).ajaxStart(Application.OnAjaxStart);
+$(document).ajaxComplete(Application.OnAjaxComplete);
