@@ -1,3 +1,37 @@
+.share{
+	background-color: #ffffff;
+	box-shadow: 0px 0px 10px #ffffff;
+	height: 120px;
+	padding: 15px;
+	position: absolute;
+	width: 280px;
+	z-index: 1000;
+	a{
+		margin: 0px 10px 0px 0px;
+	}
+	.share_close{
+		background-color: #000000;
+		color: #ffffff;
+		float: right;
+		font-size: 20px;
+		font-weight: 'Oswald';
+		margin: -10px;
+		padding: 5px;
+	}
+	.spacer{
+		margin: 10px 0px 10px 0px;
+	}
+	.title{
+		color: #000000;
+		display: inline-block;
+		margin: 0px 10px 0px 0px;
+	}
+	.text{
+		display: inline-block;
+		font-family: 'Lato';
+	}
+}
+
 .index{
 	.posts{
 		margin: 10px 0px 25px 0px;
@@ -106,7 +140,7 @@
 	.fb_comments_count_zero{
 		display: none;
 	}
-	.share{
+	.share_container{
 		display: none;
 	}
 	.tags{

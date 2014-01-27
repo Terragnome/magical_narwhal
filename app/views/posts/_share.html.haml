@@ -1,3 +1,16 @@
-#share
-  =link_to('TWITTER', root_path)
-  =link_to('FACEBOOK', root_path)
+.share
+  -summary=share.title
+  -url=post_url(share.id)
+  .title
+    SHARE
+  %a.share_close X
+  .spacer
+  =mail_to('', 'EMAIL', :subject=>summary, :body=>url)
+  =link_to('TWITTER', "http://twitter.com/home?status=#{summary} #{url}")
+  =link_to('FACEBOOK', "http://www.facebook.com/share.php?u=#{url}")
+  =link_to('GOOGLE+', "https://m.google.com/app/plus/x/?v=compose&content=#{url}")
+  .spacer
+  .title
+    LINK
+  .text
+    ="#{url}"
