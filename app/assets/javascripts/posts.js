@@ -11,22 +11,24 @@ Post.OnCommentButton = function(){
 }
 
 Post.OnShareButton = function(){ Post.ShowShare($(this).parent().parent(), true); }
-Post.ShowShare = function(postObj){
-	Post.SetShare(postObj, true);
-}
-Post.HideShare = function(postObj){
-	Post.SetShare(postObj, false);
-}
+Post.ShowShare = function(postObj){ Post.SetShare(postObj, true); }
+Post.HideShare = function(postObj){ Post.SetShare(postObj, false); }
 Post.SetShare = function(postObj, isOn){
 	var blocker = Application.GetBlocker();
-	var shareSection = postObj.find('.share');
+	Application.SetObjDisplay(blocker, isOn);
 
-	if(isOn){
-		Application.SetBlockerDisplay(blocker, true);
-		blocker.one('click', function(){ Post.HideShare(postObj); });
-		Application.SetObjDisplay(shareSection, true);
-	}else{
-		Application.SetBlockerDisplay(false);
-		Application.SetObjDisplay(shareSection, false);
+	var share = $('#share');
+	if(share != null)
+	{
+		if(isOn){
+			share.css('left', ($(document).width()-share.outerWidth())/2+"px");
+			share.css('top', ($(document).height()-share.outerHeight())/2+"px");
+			share.css('display', 'auto');
+			share.appendTo('#popups');
+
+			blocker.one('click', function(){ Post.HideShare(postObj); });
+		}else{
+			share.appendTo(postObj.find('.share'));
+		}
 	}
 }
