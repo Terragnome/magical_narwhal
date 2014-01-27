@@ -48,16 +48,13 @@ Application.OnReady = function(){
 }
 
 Application.OnAjaxStart = function(){
-	$('#scene').animate({
-		opacity: 0
-    }, 250);
 }
 Application.OnAjaxComplete = function(){
 	$('#scene').css('opacity', 0);
 	$('#scene').scrollTop(0);
 	$('#scene').animate({
 		opacity: 1
-    }, 250);
+    }, 200);
 	FB.XFBML.parse();
 }
 
