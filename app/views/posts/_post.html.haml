@@ -24,6 +24,7 @@
   .actions
     %a.comment_button
       COMMENT
+      %fb:comments-count.comment_count{:href=>post_url(post.id)}
     %a.share_button
       SHARE
     -if post.tag_list.count>0
