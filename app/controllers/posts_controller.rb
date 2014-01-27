@@ -35,7 +35,7 @@ class PostsController < ApplicationController
     @tags=@posts.tag_counts_on(:tags)
     
     respond_to do |format|
-      format.html{render action: 'index'}
+      format.html
       format.js
     end
   end
@@ -48,7 +48,7 @@ class PostsController < ApplicationController
     end
 
     respond_to do |format|
-      format.html{render action: 'show'}
+      format.html
       format.js
     end
   end

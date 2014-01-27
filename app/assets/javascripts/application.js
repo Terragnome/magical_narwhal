@@ -55,3 +55,4 @@ Application.OnReady = function(){
 }
 
 $(Application.OnReady);
+$(document).ajaxComplete(Application.OnReady);

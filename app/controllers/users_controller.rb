@@ -3,7 +3,7 @@ class UsersController < ApplicationController
     @users=User.all
 
     respond_to do |format|
-      format.html{render action: 'index'}
+      format.html
       format.js
     end
   end
@@ -17,7 +17,7 @@ class UsersController < ApplicationController
     end
 
     respond_to do |format|
-      format.html{render action: 'show'}
+      format.html
       format.js
     end
   end

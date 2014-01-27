@@ -3,28 +3,28 @@ class InfoController < ApplicationController
     @users=User.all
 
     respond_to do |format|
-      format.html{render action: 'about'}
+      format.html
       format.js
     end
   end
   
   def contact
     respond_to do |format|
-      format.html{render action: 'contact'}
+      format.html
       format.js
     end
   end
   
   def privacy
     respond_to do |format|
-      format.html{render action: 'privacy'}
+      format.html
       format.js
     end
   end
   
   def terms
     respond_to do |format|
-      format.html{render action: 'terms'}
+      format.html
       format.js
     end
   end
