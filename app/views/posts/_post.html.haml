@@ -1,4 +1,4 @@
-.post
+.post{:id=>"post_#{post.id}"}
   .header
     -if post.user.icon
       =link_to image_tag(post.user.icon, :class=>'icon'), user_path(post.user.nickname), 'data-push'=>true
