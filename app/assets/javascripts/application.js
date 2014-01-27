@@ -50,9 +50,9 @@ Application.SetBlockerDisplay = function(isOn){
 
 }
 
-Application.OnReady = function(){
+Application.OnAjax = function(){
 	Application.Transition();
+	FB.XFBML.parse();
 }
 
-$(Application.OnReady);
-$(document).ajaxComplete(Application.OnReady);
+$(document).ajaxComplete(Application.OnAjax);
