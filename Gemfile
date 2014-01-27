@@ -25,6 +25,9 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jquery-turbolinks'
 
+# Ajax links
+gem 'wiselinks'
+
 # Mobile
 gem 'mobile-fu'
 

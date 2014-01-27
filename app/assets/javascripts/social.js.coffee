@@ -30,7 +30,6 @@ loadFacebookSDK = ->
 initializeFacebookSDK = ->
   FB.init
     appId     : '696404120390063'
-    channelUrl: '//WWW.YOUR_DOMAIN.COM/channel.html'
     status    : true
     cookie    : true
     xfbml     : true

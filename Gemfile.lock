@@ -194,6 +194,7 @@ GEM
       raindrops (~> 0.7)
     warden (1.2.3)
       rack (>= 1.0)
+    wiselinks (1.1.4)
 
 PLATFORMS
   ruby
@@ -220,3 +221,4 @@ DEPENDENCIES
   turbolinks
   uglifier (>= 1.3.0)
   unicorn
+  wiselinks

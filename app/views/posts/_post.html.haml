@@ -1,11 +1,11 @@
-.post
+.post{:id=>"post_#{post.id}"}
   .header
     -if post.user.icon
-      =link_to image_tag(post.user.icon, :class=>'icon'), user_path(post.user.nickname)
+      =link_to image_tag(post.user.icon, :class=>'icon'), user_path(post.user.nickname), 'data-push'=>true
     %h1
       =post.title.upcase
     .info_section
-      =link_to(user_path(post.user.nickname)) do
+      =link_to user_path(post.user.nickname), 'data-push'=>true do
         .info.link
           =image_tag('/assets/icons/info.png')
           .text
@@ -31,12 +31,9 @@
         .tags_title
           TAGS
         -post.tag_list.each do |tag|
-          =link_to(tag.upcase, tag_archive_path(tag))
+          =link_to(tag.upcase, tag_archive_path(tag), 'data-push'=>true)
   .spacer
     .fb-comments{'data-href'=>post_url(post.id), 'data-numposts'=>'5', 'data-colorscheme'=>'light', :style=>'display:none;'}
-  .share
-    =link_to('TWITTER', root_path)
-    =link_to('FACEBOOK', root_path)
 
 :javascript
   Post.Init();

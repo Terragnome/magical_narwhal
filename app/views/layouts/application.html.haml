@@ -8,11 +8,12 @@
     =csrf_meta_tags
     %meta{:name=>'viewport', :content=>'width=device-width, initial-scale=1.0'}
   %body
+    #popups
     #blocker
     #fb-root
     =render :partial=>'layouts/header', :object=>@app_title_components
     #scene{:style=>"overflow:#{is_mobile_device? ? 'visible' : 'scroll'};"}
-      .scene_body
+      #scene_body
         =yield
       .spacer
       =render :partial=>'layouts/footer'

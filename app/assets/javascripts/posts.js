@@ -1,10 +1,7 @@
 var Post = Post || {};
 
 Post.Init = function(){
-	//Create facebook comment section
 	$('.comment_button').each(function(){ $(this).click(Post.OnCommentButton); });
-
-	//Share button
 	$('.share_button').each(function(){ $(this).click(Post.OnShareButton); });
 }
 
@@ -14,8 +11,12 @@ Post.OnCommentButton = function(){
 }
 
 Post.OnShareButton = function(){ Post.ShowShare($(this).parent().parent(), true); }
-Post.ShowShare = function(postObj){ Post.SetShare(postObj, true); }
-Post.HideShare = function(postObj){ Post.SetShare(postObj, false); }
+Post.ShowShare = function(postObj){
+	Post.SetShare(postObj, true);
+}
+Post.HideShare = function(postObj){
+	Post.SetShare(postObj, false);
+}
 Post.SetShare = function(postObj, isOn){
 	var blocker = Application.GetBlocker();
 	var shareSection = postObj.find('.share');
