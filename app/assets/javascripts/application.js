@@ -14,6 +14,7 @@
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require turbolinks
+//= require wiselinks
 //= require_tree .
 
 var Application = Application || {};
@@ -50,9 +51,14 @@ Application.SetBlockerDisplay = function(isOn){
 
 }
 
+Application.OnReady = function(){
+	window.wiselinks = new Wiselinks($('#scene_body'))
+}
+
 Application.OnAjax = function(){
 	Application.Transition();
 	FB.XFBML.parse();
 }
 
+$(Application.OnReady);
 $(document).ajaxComplete(Application.OnAjax);
