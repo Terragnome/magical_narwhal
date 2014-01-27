@@ -184,18 +184,6 @@ table {
 .date {
   font-family: 'Lato'; }
 
-.share {
-  background-color: #ffffff;
-  box-shadow: 0px 3px 20px #808080;
-  display: none;
-  height: 80px;
-  padding: 10px 15px 10px 15px;
-  position: absolute;
-  width: 260px;
-  z-index: 1000; }
-  .share a {
-    margin: 0px 5px 0px 5px; }
-
 .navigation a {
   font-size: 28px;
   font-weight: bold; }
@@ -214,6 +202,14 @@ table {
   position: absolute;
   width: 100%;
   z-index: 99; }
+
+#footer {
+  height: 27px;
+  padding: 3px 0px 0px 0px; }
+  #footer a {
+    color: #808080;
+    font-size: 13px;
+    margin: 0px 10px 0px 10px; }
 
 #header {
   background-color: #000000;
@@ -266,9 +262,9 @@ table {
   position: relative;
   text-align: center;
   z-index: 1; }
-  #scene .scene_body {
+  #scene #scene_body {
     display: inline-block;
-    margin: 0px 0px 30px 0px;
+    margin: 30px 0px 30px 0px;
     max-width: 960px;
     min-height: calc(100% - 91px);
     min-height: -moz-calc(100% - 91px);
@@ -277,13 +273,6 @@ table {
     width: -moz-calc(100% - 20px);
     width: -webkit-calc(100% - 20px);
     text-align: left; }
-  #scene #footer {
-    height: 27px;
-    padding: 3px 0px 0px 0px; }
-    #scene #footer a {
-      color: #808080;
-      font-size: 13px;
-      margin: 0px 10px 0px 10px; }
 
 #subscribe {
   bottom: 0px;
@@ -294,6 +283,33 @@ table {
   #subscribe img {
     height: 20px;
     width: 20px; }
+.share {
+  background-color: #ffffff;
+  box-shadow: 0px 0px 10px #ffffff;
+  padding: 15px 15px 25px 15px;
+  position: absolute;
+  width: 280px;
+  z-index: 1000; }
+  .share a {
+    margin: 0px 10px 0px 0px; }
+  .share .share_close {
+    background-color: #000000;
+    color: #ffffff;
+    float: right;
+    font-size: 20px;
+    font-weight: 'Oswald';
+    margin: -10px;
+    padding: 5px; }
+  .share .spacer {
+    margin: 10px 0px 10px 0px; }
+  .share .title {
+    color: #000000;
+    display: inline-block;
+    margin: 0px 10px 0px 0px; }
+  .share .text {
+    display: inline-block;
+    font-family: 'Lato'; }
+
 .index .posts {
   margin: 10px 0px 25px 0px; }
   .index .posts .entry {
@@ -370,31 +386,31 @@ table {
       display: inline-block;
       float: left;
       margin: 0px 10px 0px 0px; }
+  .post .comment_count {
+    color: #000000; }
+  .post .fb_comments_count_zero {
+    display: none; }
+  .post .share_container {
+    display: none; }
   .post .tags {
     display: inline-block;
     font-family: 'Oswald';
     font-weight: bold;
     text-align: right; }
     .post .tags .tags_title {
-      display: inline-block;
-      margin: 0px 10px 0px 0px; }
+      display: inline-block; }
     .post .tags a {
       display: inline-block;
-      float: none; }
+      float: none;
+      margin: 0px 0px 0px 10px; }
 
 .navigation {
   height: 70px;
   margin: 10px 0px 0px 0px; }
   .navigation a {
     margin: 0px 25px 0px 0px; }
-.index {
-  margin: 0px 0px 30px 0px; }
-
-.show {
-  margin: 0px 0px 30px 0px; }
-
 .user {
-  margin: 40px 0px 20px 0px; }
+  margin: 20px 0px 20px 0px; }
   .user .icon {
     display: inline-block;
     float: left;
