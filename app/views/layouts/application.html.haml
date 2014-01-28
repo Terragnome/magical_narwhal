@@ -15,6 +15,5 @@
     #scene{:style=>"overflow:#{is_mobile_device? ? 'visible' : 'scroll'};"}
       #scene_body
         =yield
-      .spacer
       =render :partial=>'layouts/footer'
     =render :partial=>'layouts/subscribe'
