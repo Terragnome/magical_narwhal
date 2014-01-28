@@ -47,9 +47,9 @@ Application.SetBlockerDisplay = function(isOn){
 Application.OnReady = function(){
 	window.wiselinks = new Wiselinks($('#scene_body'));
 
-	$('#scene').css('overflow', 'hidden'); //Need this for mobile
-	$('#scene').css('overflow', 'auto'); //Need this for mobile
-	$('#scene').kinetic(); //Inertial scrolling for mobile
+	$('#scene').css('overflow', 'hidden');
+	$('#scene').css('overflow', 'auto');
+	$('#scene').kinetic();
 }
 
 Application.OnAjaxStart = function(){
@@ -58,8 +58,8 @@ Application.OnAjaxStart = function(){
     }, 100);
 }
 Application.OnAjaxComplete = function(){
-	$('#scene').css('overflow', 'hidden'); //Need this for mobile
-	$('#scene').css('overflow', 'auto'); //Need this for mobile
+	$('#scene').css('overflow', 'hidden');
+	$('#scene').css('overflow', 'auto');
 	$('#scene').scrollTop(0);
 
 	$('#scene').css('opacity', 0.1);
