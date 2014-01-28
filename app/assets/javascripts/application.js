@@ -46,7 +46,9 @@ Application.SetBlockerDisplay = function(isOn){
 
 Application.OnReady = function(){
 	window.wiselinks = new Wiselinks($('#scene_body'));
-	
+
+	$('#scene').css('overflow', 'hidden'); //Need this for mobile
+	$('#scene').css('overflow', 'auto'); //Need this for mobile
 	$('#scene').kinetic(); //Inertial scrolling for mobile
 }
 
