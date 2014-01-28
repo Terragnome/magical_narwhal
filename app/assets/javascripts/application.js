@@ -49,11 +49,11 @@ Application.OnReady = function(){
 
 Application.OnAjaxStart = function(){
 	$('#scene').animate({
-		opacity: 0.4
+		opacity: 0.1
     }, 100);
 }
 Application.OnAjaxComplete = function(){
-	$('#scene').css('opacity', 0.4);
+	$('#scene').css('opacity', 0.1);
 	$('#scene').scrollTop(0);
 	$('#scene').animate({
 		opacity: 1
