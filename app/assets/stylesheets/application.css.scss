@@ -254,7 +254,7 @@ table{
 		img{
 			cursor: pointer;
 			height: #{$logo_img_height};
-			margin: #{$header_height - $logo_img_height +1} 0px 0px 0px;
+			margin: #{$header_height - $logo_img_height} 0px 0px 0px;
 			position: absolute;
 			z-index: 3;
 		}
