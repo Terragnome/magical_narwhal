@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery.turbolinks
-//= require jquery.kinetic
 //= require jquery_ujs
 //= require turbolinks
 //= require wiselinks
@@ -46,24 +45,20 @@ Application.SetBlockerDisplay = function(isOn){
 
 Application.OnReady = function(){
 	window.wiselinks = new Wiselinks($('#scene_body'));
-
-	//$('#scene').css('overflow', 'hidden');
-	//$('#scene').css('overflow', 'auto');
-	//$('#scene').kinetic();
 }
 
 Application.OnAjaxStart = function(){
-	$('#scene').animate({
+	$('#scene_body').animate({
 		opacity: 0.1
     }, 100);
 }
 Application.OnAjaxComplete = function(){
-	$('#scene').css('overflow', 'hidden');
-	$('#scene').css('overflow', 'auto');
-	$('#scene').scrollTop(0);
+	$('html,body').animate({
+	    scrollTop: 0
+	}, 100);
 
-	$('#scene').css('opacity', 0.1);
-	$('#scene').animate({
+	$('#scene_body').css('opacity', 0.1);
+	$('#scene_body').animate({
 		opacity: 1
     }, 100);
 	FB.XFBML.parse();
