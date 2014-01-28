@@ -1,6 +1,9 @@
 class SubscribeController < ApplicationController
   def feed
     @posts = Post.active.all(:select => "id, title, body", :order => "id DESC")
-    render :template => 'subscribe/feed.rss.builder', :layout => false
+    
+    respond_to do |format|
+      format.rss{ render :layout=>false }
+    end
   end
 end
