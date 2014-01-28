@@ -300,6 +300,7 @@ table{
 #scene{
 	background-color: #ffffff;
 	color: #000000;
+	overflow: scroll;
 	position: relative;
 	text-align: center;
 	top: #{$header_height};

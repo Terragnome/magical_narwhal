@@ -47,9 +47,9 @@ Application.SetBlockerDisplay = function(isOn){
 Application.OnReady = function(){
 	window.wiselinks = new Wiselinks($('#scene_body'));
 
-	$('#scene').css('overflow', 'hidden');
-	$('#scene').css('overflow', 'auto');
-	$('#scene').kinetic();
+	//$('#scene').css('overflow', 'hidden');
+	//$('#scene').css('overflow', 'auto');
+	//$('#scene').kinetic();
 }
 
 Application.OnAjaxStart = function(){
