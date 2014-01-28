@@ -185,7 +185,7 @@ table {
   font-family: 'Lato'; }
 
 .navigation a {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: bold; }
 
 #popups {
@@ -238,12 +238,12 @@ table {
     z-index: 4; }
     #header .links .link {
       display: inline-block;
-      margin: 0px 0px 0px 25px; }
+      margin: 0px 0px 0px 15px; }
       #header .links .link a {
         color: #ffffff;
         display: inline-block;
         font-family: 'Oswald';
-        font-size: 20px;
+        font-size: 18px;
         font-weight: bold; }
         #header .links .link a:hover {
           color: #006699; }
@@ -286,8 +286,7 @@ table {
 .share {
   background-color: #ffffff;
   box-shadow: 0px 0px 10px #ffffff;
-  height: 120px;
-  padding: 15px;
+  padding: 15px 15px 25px 15px;
   position: absolute;
   width: 280px;
   z-index: 1000; }
@@ -309,7 +308,8 @@ table {
     margin: 0px 10px 0px 0px; }
   .share .text {
     display: inline-block;
-    font-family: 'Lato'; }
+    font-family: 'Lato';
+    font-size: 15px; }
 
 .index .posts {
   margin: 10px 0px 25px 0px; }
@@ -350,7 +350,7 @@ table {
     font-size: 1.6em; }
 
 .post {
-  margin: 0px 0px 30px 0px; }
+  margin: 0px 0px 10px 0px; }
   .post .header .icon {
     float: left;
     height: 64px;
@@ -361,7 +361,7 @@ table {
       cursor: pointer; }
     .post .header .info_section .info {
       display: inline-block;
-      margin: 0px 30px 0px 0px; }
+      min-width: 150px; }
       .post .header .info_section .info img {
         float: left;
         height: 20px;
@@ -380,8 +380,9 @@ table {
     max-width: 640px;
     padding: 20px 0px 40px 0px; }
   .post .actions {
+    font-size: 14px;
     margin: 3px 0px 5px 0px;
-    min-height: 25px;
+    min-height: 20px;
     text-align: right; }
     .post .actions a {
       display: inline-block;
@@ -396,6 +397,7 @@ table {
   .post .tags {
     display: inline-block;
     font-family: 'Oswald';
+    font-size: 14px;
     font-weight: bold;
     text-align: right; }
     .post .tags .tags_title {
@@ -403,11 +405,10 @@ table {
     .post .tags a {
       display: inline-block;
       float: none;
-      margin: 0px 0px 0px 10px; }
+      margin: 0px 0px 0px 5px; }
 
 .navigation {
-  height: 70px;
-  margin: 10px 0px 0px 0px; }
+  height: 70px; }
   .navigation a {
     margin: 0px 25px 0px 0px; }
 .user {
