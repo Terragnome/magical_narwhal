@@ -14638,8 +14638,11 @@ Application.OnAjaxStart = function(){
     }, 100);
 }
 Application.OnAjaxComplete = function(){
-	$('#scene').css('opacity', 0.1);
+	$('#scene').css('overflow', 'hidden'); //Need this for mobile
+	$('#scene').css('overflow', 'auto'); //Need this for mobile
 	$('#scene').scrollTop(0);
+
+	$('#scene').css('opacity', 0.1);
 	$('#scene').animate({
 		opacity: 1
     }, 100);
