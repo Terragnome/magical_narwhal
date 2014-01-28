@@ -83,7 +83,7 @@
 }
 
 .post{
-	margin: 0px 0px 30px 0px;
+	margin: 0px 0px 10px 0px;
 	.header{
 		.icon{
 			float: left;
@@ -125,8 +125,9 @@
 		padding: 20px 0px 40px 0px;
 	}
 	.actions{
+		font-size: 14px;
 		margin: 3px 0px 5px 0px;
-		min-height: 25px;
+		min-height: 20px;
 		text-align: right;
 		a{
 			display: inline-block;
@@ -146,6 +147,7 @@
 	.tags{
 		display: inline-block;
 		font-family: 'Oswald';
+		font-size: 14px;
 		font-weight: bold;
 		text-align: right;
 		.tags_title{
@@ -154,14 +156,13 @@
 		a{
 			display: inline-block;
 			float: none;
-			margin: 0px 0px 0px 10px;
+			margin: 0px 0px 0px 5px;
 		}
 	}
 }
 
 .navigation{
 	height: 70px;
-	margin: 10px 0px 0px 0px;
 	a{
 		margin: 0px 25px 0px 0px;
 	}
