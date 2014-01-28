@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery.turbolinks
+//= require jquery.kinetic
 //= require jquery_ujs
 //= require turbolinks
 //= require wiselinks
@@ -45,6 +46,8 @@ Application.SetBlockerDisplay = function(isOn){
 
 Application.OnReady = function(){
 	window.wiselinks = new Wiselinks($('#scene_body'));
+	
+	$('#scene').kinetic(); //Inertial scrolling for mobile
 }
 
 Application.OnAjaxStart = function(){
