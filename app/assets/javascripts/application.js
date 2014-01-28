@@ -53,9 +53,7 @@ Application.OnAjaxStart = function(){
     }, 100);
 }
 Application.OnAjaxComplete = function(){
-	$('html,body').animate({
-	    scrollTop: 0
-	}, 100);
+	$('html,body').scrollTop(0);
 
 	$('#scene_body').css('opacity', 0.1);
 	$('#scene_body').animate({
