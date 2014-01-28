@@ -14522,11 +14522,10 @@ Post.SetShare = function(postObj, isOn){
 	if(share != null)
 	{
 		if(isOn){
-			share.css('left', ($(document).width()-share.outerWidth())/2+"px");
-			share.css('top', ($(document).height()-share.outerHeight())/2+"px");
-			share.hide().fadeIn(200);
-			
 			share.appendTo('#popups');
+			share.css('left', ($(window).width()-share.outerWidth())/2+"px");
+			share.css('top', ($(window).height()-share.outerHeight())/2+"px");
+			share.hide().fadeIn(200);
 
 			blocker.one('click', function(){ Post.HideShare(postObj); });
 		}else{
@@ -14621,6 +14620,7 @@ Application.ToggleBlocker = function(){ Application.SetBlockerDisplay(Applicatio
 Application.SetBlockerDisplay = function(isOn){
 	var blocker = Application.GetBlocker();
 	if(isOn){
+		$('html,body').css('pointer-events', 'none');
 		blocker.fadeIn('fast', function(){ Application.SetObjDisplay(blocker, true); });
 	}else{
 		blocker.fadeOut('fast', function(){ Application.SetObjDisplay(blocker, false); });
@@ -14632,15 +14632,15 @@ Application.OnReady = function(){
 }
 
 Application.OnAjaxStart = function(){
-	$('#scene_body').animate({
+	$('#scene').animate({
 		opacity: 0.1
     }, 100);
 }
 Application.OnAjaxComplete = function(){
 	$('html,body').scrollTop(0);
 
-	$('#scene_body').css('opacity', 0.1);
-	$('#scene_body').animate({
+	$('#scene').css('opacity', 0.1);
+	$('#scene').animate({
 		opacity: 1
     }, 100);
 	FB.XFBML.parse();
