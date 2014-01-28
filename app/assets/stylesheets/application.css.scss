@@ -16,7 +16,7 @@ $header_width: 300px;
 $header_height: 175px;
 
 $footer_width: $header_height;
-$footer_height: 47px;
+$footer_height: 30px;
 
 $logo_img_width: 300px;
 $logo_img_height: 150px;
@@ -236,7 +236,6 @@ table{
 #footer{
 	bottom: 0px;
 	height: #{$footer_height};
-	padding: 3px 0px 0px 0px;
 	position: absolute;
 	width: 100%;
 	a{
@@ -312,9 +311,10 @@ table{
 	top: #{$header_height};
 	width: 100%;
 	z-index: 5;
+
 	#scene_body{
 		display: inline-block;
-		margin: 30px 0px 30px 0px;
+		margin: 30px 0px 80px 0px;
 		max-width: 960px;
 		overflow: visible;
 		width: calc(100% - #{$scene_body_margin_x});
