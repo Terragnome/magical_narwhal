@@ -301,6 +301,7 @@ table{
 	height: calc(100% - #{$header_height});
 	height: -moz-calc(100% - #{$header_height});
 	height: -webkit-calc(100% - #{$header_height});
+	overflow: auto;
 	position: relative;
 	text-align: center;
 	z-index: 1;
