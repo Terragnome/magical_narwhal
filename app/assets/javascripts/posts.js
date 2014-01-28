@@ -24,11 +24,10 @@ Post.SetShare = function(postObj, isOn){
 	if(share != null)
 	{
 		if(isOn){
-			share.css('left', ($(document).width()-share.outerWidth())/2+"px");
-			share.css('top', ($(document).height()-share.outerHeight())/2+"px");
-			share.hide().fadeIn(200);
-			
 			share.appendTo('#popups');
+			share.css('left', ($(window).width()-share.outerWidth())/2+"px");
+			share.css('top', ($(window).height()-share.outerHeight())/2+"px");
+			share.hide().fadeIn(200);
 
 			blocker.one('click', function(){ Post.HideShare(postObj); });
 		}else{

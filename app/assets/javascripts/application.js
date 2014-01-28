@@ -35,6 +35,7 @@ Application.ToggleBlocker = function(){ Application.SetBlockerDisplay(Applicatio
 Application.SetBlockerDisplay = function(isOn){
 	var blocker = Application.GetBlocker();
 	if(isOn){
+		$('html,body').css('pointer-events', 'none');
 		blocker.fadeIn('fast', function(){ Application.SetObjDisplay(blocker, true); });
 	}else{
 		blocker.fadeOut('fast', function(){ Application.SetObjDisplay(blocker, false); });
