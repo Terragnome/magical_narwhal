@@ -13,8 +13,10 @@
     #fb-root
     =render :partial=>'layouts/header', :object=>@app_title_components
     #scene{:style=>"overflow:#{is_mobile_device? ? 'visible' : 'scroll'};"}
-      #scene_content
-        #scene_body
-          =yield
-        =render :partial=>'layouts/footer'
-      =render :partial=>'layouts/subscribe'
+      #scene_spacer
+        #scene_content
+          #scene_body_spacing
+            #scene_body
+              =yield
+          #scene_footer_spacing
+    =render :partial=>'layouts/footer'

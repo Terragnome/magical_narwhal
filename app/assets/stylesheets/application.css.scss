@@ -16,7 +16,7 @@ $header_width: 300px;
 $header_height: 175px;
 
 $footer_width: $header_height;
-$footer_height: 54px;
+$footer_height: 37px;
 
 $logo_img_width: 300px;
 $logo_img_height: 150px;
@@ -87,8 +87,7 @@ div{
 }
 
 html, body{
-	background-repeat: no-repeat;
-	background-size: cover;
+	background-color: #000000;
 	border: 0px;
 	height: 100%;
 	margin: 0px;
@@ -234,13 +233,16 @@ table{
 }
 
 #footer{
+	background-color: #000000;
 	bottom: 0px;
 	height: #{$footer_height};
-	position: absolute;
+	position: fixed;
+	text-align: center;
 	width: 100%;
+	z-index: 2;
 	a{
-		color: #808080;
-		font-size: 13px;
+		color: #ffffff;
+		font-size: 14px;
 		margin: 0px 10px 0px 10px;
 	}
 }
@@ -250,6 +252,7 @@ table{
 	height: #{$header_height};
 	min-width: #{$header_width};
 	position: fixed;
+	top: 0px;
 	width: 100%;
 	z-index: 2;
 
@@ -301,28 +304,33 @@ table{
 }
 
 #scene{
-	background-color: #ffffff;
-	color: #000000;
-	min-height: 100vh;
-	position: relative;
-	text-align: center;
-	top: #{$header_height};
-	width: 100%;
-	z-index: 5;
-
-	#scene_body{
-		display: inline-block;
-		margin: 30px 0px 80px 0px;
-		min-height: calc(100% -#{$header_height});
-		min-height: -moz-calc(100% - #{$header_height});
-		min-height: -webkit-calc(100% - #{$header_height});
-		max-width: 960px;
-		overflow: visible;
-		width: calc(100% - #{$scene_body_margin_x});
-		width: -moz-calc(100% - #{$scene_body_margin_x});
-		width: -webkit-calc(100% - #{$scene_body_margin_x});
-		text-align: left;
+	#scene_content{
+		min-height: 100vh;
+		position: relative;
+		top: #{$header_height};
+		z-index: 5;
 		
+		#scene_body_spacing{
+			color: #000000;
+			background-color:#ffffff;
+			min-height:100vh;
+			width:100%;
+			text-align:center;
+
+			#scene_body{
+				display: inline-block;
+				margin: 30px 0px 60px 0px;
+				max-width: 960px;
+				width: calc(100% - #{$scene_body_margin_x});
+				width: -moz-calc(100% - #{$scene_body_margin_x});
+				width: -webkit-calc(100% - #{$scene_body_margin_x});
+				text-align: left;
+			}
+		}
+
+		#scene_footer_spacing{
+			height: #{$footer_height};
+		}
 	}
 }
 
