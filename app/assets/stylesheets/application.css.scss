@@ -258,7 +258,7 @@ table{
 		img{
 			cursor: pointer;
 			height: #{$logo_img_height};
-			margin: #{$header_height - $logo_img_height} 0px 0px 0px;
+			margin: #{$header_height - $logo_img_height - 2} 0px 0px 0px;
 			position: absolute;
 			z-index: 3;
 		}
@@ -266,7 +266,7 @@ table{
 			color: #ffffff;
 			font-family: 'LeagueGothic';
 			font-size: 120px;
-			margin: 58px 0px 0px #{$logo_img_width +20};
+			margin: 53px 0px 0px #{$logo_img_width +20};
 		}
 	}
 	.links{
@@ -302,6 +302,7 @@ table{
 
 #scene{
 	background-color: #ffffff;
+	box-shadow: 0px -5px 3px #ffffff;
 	color: #000000;
 	min-height: calc(100% -#{$header_height});
 	min-height: -moz-calc(100% - #{$header_height});
