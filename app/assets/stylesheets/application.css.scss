@@ -329,7 +329,9 @@ table{
 		}
 
 		#scene_footer_spacing{
-			height: #{$footer_height};
+			height: calc(#{$footer_height} + 5px);
+			height: -moz-calc(#{$footer_height} + 5px);
+			height: -webkit-calc(#{$footer_height} + 5px);
 		}
 	}
 }
