@@ -19,7 +19,7 @@
           .text.link
             =link_to('EDIT', rails_admin.edit_path(model_name:'post', id:post.id))
   %p.body
-    =post.body.html_safe
+    =post.body.gsub(/\n/, '<br/>').html_safe
   .spacer
   .actions
     %a.comment_button
