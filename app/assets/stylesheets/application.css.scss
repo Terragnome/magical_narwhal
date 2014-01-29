@@ -16,7 +16,7 @@ $header_width: 300px;
 $header_height: 175px;
 
 $footer_width: $header_height;
-$footer_height: 54px;
+$footer_height: 37px;
 
 $logo_img_width: 300px;
 $logo_img_height: 150px;
@@ -303,7 +303,9 @@ table{
 #scene{
 	background-color: #ffffff;
 	color: #000000;
-	min-height: 100vh;
+	min-height: calc(100% -#{$header_height});
+	min-height: -moz-calc(100% - #{$header_height});
+	min-height: -webkit-calc(100% - #{$header_height});
 	position: relative;
 	text-align: center;
 	top: #{$header_height};
