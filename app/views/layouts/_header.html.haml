@@ -1,7 +1,7 @@
 #header
   .logo
     =link_to(root_path, 'data-push'=>true) do
-      =image_tag('https://s3-us-west-1.amazonaws.com/magicalnarwhal/avatars/mikey.png', :id=>'header_logo')
+      =image_tag("#{@asset_root}/avatars/mikey.png", :id=>'header_logo')
     #header_links.links
       .link
         =link_to('LATEST', latest_path, :class=>'latest', 'data-push'=>true)

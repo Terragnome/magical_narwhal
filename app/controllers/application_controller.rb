@@ -12,6 +12,8 @@ class ApplicationController < ActionController::Base
     @app_title=@app_title_components.join('')
     @app_description='._.'
 
+    @asset_root = MagicalNarwhal::Application.config.asset_root
+
     @primary_user=User.first
   end
 end
