@@ -84,5 +84,5 @@ MagicalNarwhal::Application.configure do
   config.assets.compile = true
   config.assets.digest = true
   
-  config.asset_root = '/'
+  config.asset_root = 'https://s3-us-west-1.amazonaws.com/magicalnarwhal'
 end
