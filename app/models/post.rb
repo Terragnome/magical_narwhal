@@ -2,6 +2,7 @@ class Post < ActiveRecord::Base
   belongs_to :user
 
   before_validation :set_posted_at
+  before_validation :set_post_id
 
   scope :active, -> {where(active:true)}
   
@@ -17,6 +18,10 @@ class Post < ActiveRecord::Base
 
   def set_posted_at
     self.posted_at = Time.now if self.active && self.posted_at.blank?
+  end
+
+  def set_post_id
+    self.post_id=Post.count if self.active
   end
 
   def older
