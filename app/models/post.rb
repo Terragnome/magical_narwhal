@@ -21,7 +21,7 @@ class Post < ActiveRecord::Base
   end
 
   def set_post_id
-    self.post_id=Post.count if self.active
+    self.post_id=Post.active.count if self.active && self.post_id.blank?
   end
 
   def older
