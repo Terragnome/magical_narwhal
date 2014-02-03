@@ -3,12 +3,10 @@
     =render :partial=>'tag_cloud', :object=>@tags
     .spacer
   .posts
-    -i=0
     -@posts.reverse.each do |p|
       =link_to post_path(p.id), 'data-push'=>true do
-        .entry{:class=>"#{(i%10==0 ? 'black' : i%2==0 ? 'gray' : 'white')}"}
+        .entry{:class=>"#{(p.post_id%10==0 ? 'black' : p.post_id%2==0 ? 'gray' : 'white')}"}
           .title
             =p.title.upcase
           .date
             ="##{p.post_id} - #{p.date}"
-      -i+=1
