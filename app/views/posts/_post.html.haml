@@ -7,11 +7,11 @@
     .info_section
       =link_to user_path(post.user.nickname), 'data-push'=>true do
         .info.link
-          =image_tag('/assets/icons/info.png')
+          =image_tag('https://s3-us-west-1.amazonaws.com/magicalnarwhal/icons/info.png')
           .text
             =post.user.nickname
       .info
-        =image_tag('/assets/icons/calendar.png')
+        =image_tag('https://s3-us-west-1.amazonaws.com/magicalnarwhal/icons/calendar.png')
         .text
           =post.display_time
       -if user_signed_in? && current_user == post.user
