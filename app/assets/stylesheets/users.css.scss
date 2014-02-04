@@ -13,8 +13,10 @@
 	min-height: 270px;
 	.icon{
 		float: left;
+		max-height: 270px;
+		max-width: 250px;
 		margin: 0px 20px 0px 0px;
-		height: 270px;
+
 	}
 	.info_section{
 		margin: 10px 0px 0px 0px;

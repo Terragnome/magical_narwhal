@@ -1,0 +1,443 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+ */
+@font-face {
+  font-family: 'CrimsonText';
+  src: url("/fonts/crimson/CrimsonText-Roman.ttf"); }
+
+@font-face {
+  font-family: 'Forum';
+  src: url("/fonts/forum/Forum-Regular.ttf"); }
+
+@font-face {
+  font-family: 'Fjord';
+  src: url("/fonts/fjord/FjordOne-Regular.otf"); }
+
+@font-face {
+  font-family: 'Lato';
+  src: url("/fonts/lato/Lato-Reg.ttf"); }
+
+@font-face {
+  font-family: 'LeagueGothic';
+  src: url("/fonts/League-Gothic/LeagueGothic-Regular.otf"); }
+
+@font-face {
+  font-family: 'Oswald';
+  src: url("/fonts/oswald/Oswald-Regular.otf"); }
+
+@font-face {
+  font-family: 'RobotoSlab';
+  src: url("/fonts/roboto-slab/RobotoSlab-Regular.ttf"); }
+
+@font-face {
+  font-family: 'Rosario';
+  src: url("/fonts/rosario/Rosario-Regular.otf"); }
+
+@font-face {
+  font-family: 'Stalemate';
+  src: url("/fonts/stalemate.regular.ttf"); }
+
+a {
+  color: #0099cc;
+  cursor: pointer;
+  font-family: 'Oswald';
+  text-decoration: none; }
+  a:hover {
+    color: #006699; }
+
+div {
+  border: 0px;
+  cursor: default;
+  margin: 0px;
+  padding: 0px; }
+
+html, body {
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 0px;
+  height: 100%;
+  margin: 0px;
+  min-width: 300px;
+  padding: 0px;
+  width: 100%; }
+  html ::selection, body ::selection {
+    background-color: #0099cc;
+    color: #ffffff; }
+  html ::-moz-selection, body ::-moz-selection {
+    background-color: #0099cc;
+    color: #ffffff; }
+
+h1 {
+  border: 0px;
+  font-family: 'Oswald';
+  font-size: 32px;
+  margin: 0px;
+  padding: 0px; }
+
+h2 {
+  border: 0px;
+  font-family: 'Oswald';
+  font-size: 40px;
+  margin: 0px;
+  padding: 0px; }
+
+img {
+  border: 0px;
+  display: inline-block;
+  margin: 0px;
+  padding: 0px; }
+
+label {
+  font-family: 'Lato'; }
+
+p {
+  border: 0px;
+  font-family: 'Lato';
+  font-size: 16px;
+  margin: 0px;
+  padding: 0px; }
+
+span {
+  border: 0px;
+  margin: 0px;
+  padding: 0px; }
+
+table {
+  border: 0px;
+  margin: 0px;
+  padding: 0px; }
+  table td {
+    border: 0px;
+    margin: 0px;
+    padding: 0px; }
+  table th {
+    border: 0px;
+    margin: 0px;
+    padding: 0px; }
+  table tr {
+    border: 0px;
+    margin: 0px;
+    padding: 0px; }
+
+.black {
+  background-color: #000000; }
+
+.white {
+  background-color: #ffffff; }
+
+.red {
+  background-color: #ff0000; }
+
+.blue {
+  background-color: #0000ff; }
+
+.green {
+  background-color: #00ff00; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+.bold {
+  font-weight: bold; }
+
+.inline {
+  display: inline-block; }
+
+.clearfix {
+  display: inline-block; }
+
+.clearfix:after {
+  clear: both;
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  visibility: hidden; }
+
+.fb-comments, .fb-comments * {
+  width: 100% !important; }
+
+.small_icon {
+  height: 20px;
+  width: 20px; }
+
+.medium_icon {
+  height: 28px;
+  width: 28px; }
+
+.spacer {
+  border-bottom: 1px solid #c0c0c0; }
+
+.title {
+  font-family: 'Oswald'; }
+
+.date {
+  font-family: 'Lato'; }
+
+.navigation a {
+  font-size: 24px;
+  font-weight: bold; }
+
+#popups {
+  position: absolute;
+  z-index: 100; }
+
+#blocker {
+  background-color: #000000;
+  display: none;
+  height: 100%;
+  opacity: 0.75;
+  position: fixed;
+  width: 100%;
+  z-index: 99; }
+
+#footer {
+  bottom: 0px;
+  height: 46px;
+  position: absolute;
+  width: 100%; }
+  #footer a {
+    color: #808080;
+    font-size: 13px;
+    margin: 0px 10px 0px 10px; }
+
+#header {
+  background-color: #000000;
+  height: 175px;
+  min-width: 300px;
+  position: fixed;
+  width: 100%;
+  z-index: 2; }
+  #header .logo {
+    overflow: hidden; }
+    #header .logo img {
+      cursor: pointer;
+      height: 150px;
+      margin: 25px 0px 0px 10px;
+      position: absolute;
+      z-index: 3; }
+    #header .logo .title {
+      color: #ffffff;
+      font-family: 'LeagueGothic';
+      font-size: 120px;
+      margin: 58px 0px 0px 315px; }
+  #header .links {
+    margin: 10px 15px 10px 15px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 4; }
+    #header .links .link {
+      display: inline-block;
+      margin: 0px 0px 0px 15px; }
+      #header .links .link a {
+        color: #ffffff;
+        display: inline-block;
+        font-family: 'Oswald';
+        font-size: 18px;
+        font-weight: bold; }
+        #header .links .link a:hover {
+          color: #006699; }
+      #header .links .link img {
+        display: inline-block;
+        height: 20px;
+        width: 20px; }
+      #header .links .link .latest {
+        color: #0099cc; }
+
+#scene {
+  background-color: #ffffff;
+  color: #000000;
+  min-height: calc(100% -175px);
+  min-height: -moz-calc(100% - 175px);
+  min-height: -webkit-calc(100% - 175px);
+  position: relative;
+  text-align: center;
+  top: 175px;
+  width: 100%;
+  z-index: 5; }
+  #scene #scene_body {
+    display: inline-block;
+    margin: 30px 0px 110px 0px;
+    min-height: calc(100% -175px);
+    min-height: -moz-calc(100% - 175px);
+    min-height: -webkit-calc(100% - 175px);
+    max-width: 960px;
+    overflow: visible;
+    width: calc(100% - 20px);
+    width: -moz-calc(100% - 20px);
+    width: -webkit-calc(100% - 20px);
+    text-align: left; }
+
+#subscribe {
+  bottom: 0px;
+  right: 0px;
+  margin: 0px 10px 0px 10px;
+  position: fixed;
+  z-index: 10; }
+  #subscribe img {
+    height: 20px;
+    width: 20px; }
+.share {
+  background-color: #ffffff;
+  box-shadow: 0px 0px 10px #ffffff;
+  padding: 15px 15px 25px 15px;
+  position: fixed;
+  width: 280px; }
+  .share a {
+    margin: 0px 10px 0px 0px; }
+  .share .share_close {
+    background-color: #000000;
+    color: #ffffff;
+    float: right;
+    font-size: 20px;
+    font-weight: 'Oswald';
+    margin: -10px;
+    padding: 5px; }
+  .share .spacer {
+    margin: 10px 0px 10px 0px; }
+  .share .title {
+    color: #000000;
+    display: inline-block;
+    margin: 0px 10px 0px 0px; }
+  .share .text {
+    display: inline-block;
+    font-family: 'Lato';
+    font-size: 15px; }
+
+.index .posts {
+  margin: 10px 0px 25px 0px; }
+  .index .posts .entry {
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px 20px 10px 20px; }
+    .index .posts .entry:hover {
+      background-color: #0099cc;
+      color: #ffffff; }
+    .index .posts .entry:hover .date {
+      color: #ffffff; }
+    .index .posts .entry:hover .title {
+      color: #ffffff; }
+  .index .posts .white {
+    background-color: #ffffff;
+    color: #000000; }
+  .index .posts .black {
+    background-color: #000000;
+    color: #ffffff; }
+  .index .posts .gray {
+    background-color: #e0e0e0;
+    color: #000000; }
+  .index .posts .title {
+    color: #0099cc;
+    cursor: inherit;
+    font-size: 18px; }
+  .index .posts .date {
+    cursor: inherit;
+    font-size: 14px; }
+  .index .posts .css1 {
+    font-size: 1.0em; }
+  .index .posts .css2 {
+    font-size: 1.2em; }
+  .index .posts .css3 {
+    font-size: 1.4em; }
+  .index .posts .css4 {
+    font-size: 1.6em; }
+
+.post {
+  margin: 0px 0px 10px 0px; }
+  .post .header .icon {
+    float: left;
+    height: 64px;
+    margin: 6px 12px 6px 0px; }
+  .post .header .info_section {
+    margin: 2px 0px 0px 0px; }
+    .post .header .info_section .link {
+      cursor: pointer; }
+    .post .header .info_section .info {
+      display: inline-block;
+      min-width: 150px; }
+      .post .header .info_section .info img {
+        float: left;
+        height: 20px;
+        width: 20px;
+        margin: 0px 3px 0px 0px; }
+      .post .header .info_section .info .text {
+        cursor: inherit;
+        float: left;
+        font-family: 'Lato';
+        font-size: 14px;
+        margin: 1px 0px 0px 0px; }
+  .post .header .subtitle {
+    color: #f0f0f0;
+    font-size: 14px; }
+  .post .body {
+    max-width: 640px;
+    padding: 20px 0px 40px 0px; }
+  .post .actions {
+    font-size: 14px;
+    margin: 3px 0px 5px 0px;
+    min-height: 20px;
+    text-align: right; }
+    .post .actions a {
+      display: inline-block;
+      float: left;
+      margin: 0px 10px 0px 0px; }
+  .post .comment_count {
+    color: #000000; }
+  .post .fb_comments_count_zero {
+    display: none; }
+  .post .share_container {
+    display: none; }
+  .post .tags {
+    display: inline-block;
+    font-family: 'Oswald';
+    font-size: 14px;
+    font-weight: bold;
+    text-align: right; }
+    .post .tags .tags_title {
+      display: inline-block; }
+    .post .tags a {
+      display: inline-block;
+      float: none;
+      margin: 0px 0px 0px 5px; }
+
+.navigation a {
+  margin: 0px 25px 0px 0px; }
+.user {
+  margin: 20px 0px 20px 0px;
+  min-height: 270px; }
+  .user .icon {
+    float: left;
+    max-height: 270px;
+    max-width: 250px;
+    margin: 0px 20px 0px 0px; }
+  .user .info_section {
+    margin: 10px 0px 0px 0px; }
+    .user .info_section .info {
+      cursor: pointer;
+      display: inline-block;
+      margin: 0px 30px 0px 0px; }
+      .user .info_section .info img {
+        float: left;
+        height: 28px;
+        width: 28px;
+        margin: 0px 7px 0px 0px; }
+      .user .info_section .info .text {
+        cursor: inherit;
+        float: left;
+        font-size: 22px; }
+  .user .body {
+    padding: 15px 0px 20px 0px; }

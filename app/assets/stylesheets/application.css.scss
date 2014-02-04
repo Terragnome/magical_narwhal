@@ -262,7 +262,7 @@ table{
 		img{
 			cursor: pointer;
 			height: #{$logo_img_height};
-			margin: #{$header_height - $logo_img_height} 0px 0px 0px;
+			margin: #{$header_height - $logo_img_height} 0px 0px 10px;
 			position: absolute;
 			z-index: 3;
 		}
@@ -270,7 +270,7 @@ table{
 			color: #ffffff;
 			font-family: 'LeagueGothic';
 			font-size: 120px;
-			margin: 58px 0px 0px #{$logo_img_width + 20};
+			margin: 58px 0px 0px #{$logo_img_width +15};
 		}
 	}
 	.links{
