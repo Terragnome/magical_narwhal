@@ -28,6 +28,8 @@ gem 'jquery-turbolinks'
 # Ajax links
 gem 'wiselinks'
 
+gem 'newrelic_rpm'
+
 # Mobile
 gem 'mobile-fu'
 
