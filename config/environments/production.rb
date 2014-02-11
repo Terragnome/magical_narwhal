@@ -19,9 +19,6 @@ MagicalNarwhal::Application.configure do
   # For large-scale production use, consider using a caching reverse proxy like nginx, varnish or squid.
   # config.action_dispatch.rack_cache = true
 
-  # Disable Rails's static asset server (Apache or nginx will already do this).
-  config.serve_static_assets = false
-
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
   # config.assets.css_compressor = :sass
@@ -81,8 +78,6 @@ MagicalNarwhal::Application.configure do
   #Needed to get css to appear on Heroku
   config.cache_classes = true
   config.serve_static_assets = true
-  config.assets.compile = true
-  config.assets.digest = true
   
   config.asset_root = 'https://s3-us-west-1.amazonaws.com/magicalnarwhal'
 end
