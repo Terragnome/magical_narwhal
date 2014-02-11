@@ -5,6 +5,18 @@ Post.Init = function(){
 	$('.share_button').each(function(){ $(this).click(Post.OnShare); });
 	$('.share_close').each(function(){ $(this).click(Post.OnShareClose); });
 	$('.share_copy_link').each(function(){ $(this).click(Post.OnShareCopyLink); });
+
+	$(document).unbind('keydown');
+	$(document).keydown(function(e) {
+		switch(e.keyCode){
+			case 37:
+				$('#previous_post').click();
+				break;
+			case 39:
+				$('#next_post').click();
+				break;
+		}
+	});
 }
 
 Post.OnComment = function(){

@@ -8,12 +8,12 @@ class Post < ActiveRecord::Base
   
   acts_as_taggable
   
-  def self.oldest
-    @@oldest ||= Post.active.first
+  def self.first
+    @@first ||= Post.active.first
   end
 
-  def self.newest
-    @@newest ||= Post.active.last
+  def self.last
+    @@last ||= Post.active.last
   end
 
   def set_posted_at
@@ -24,12 +24,12 @@ class Post < ActiveRecord::Base
     self.post_id=Post.active.count if self.active && self.post_id.blank?
   end
 
-  def older
-    @older ||= Post.active.where(['id<?', id]).last
+  def previous
+    @previous ||= Post.active.where(['id<?', id]).last
   end
 
-  def newer
-    @newer ||= Post.active.where(['id>?', id]).first
+  def next
+    @next ||= Post.active.where(['id>?', id]).first
   end
 
   def date
