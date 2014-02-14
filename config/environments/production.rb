@@ -78,6 +78,7 @@ MagicalNarwhal::Application.configure do
   #Needed to get css to appear on Heroku
   config.cache_classes = true
   config.serve_static_assets = true
+  config.assets.initialize_on_precompile = false
   
   config.asset_root = 'https://s3-us-west-1.amazonaws.com/magicalnarwhal'
 end
