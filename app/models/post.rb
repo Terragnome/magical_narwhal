@@ -7,22 +7,6 @@ class Post < ActiveRecord::Base
   scope :active, -> {where(active:true)}
   
   acts_as_taggable
-  
-  def self.first
-    @@first ||= Post.active.first
-  end
-
-  def self.last
-    @@last ||= Post.active.last
-  end
-
-  def set_posted_at
-    self.posted_at = Time.now if self.active && self.posted_at.blank?
-  end
-
-  def set_post_id
-    self.post_id=Post.active.count if self.active && self.post_id.blank?
-  end
 
   def previous
     @previous ||= Post.active.where(['id<?', id]).last
@@ -38,5 +22,15 @@ class Post < ActiveRecord::Base
   
   def display_time
     date.strftime("%A, %m/%d/%y")
+  end
+  
+  private
+
+  def set_posted_at
+    self.posted_at = Time.now if self.active && self.posted_at.blank?
+  end
+
+  def set_post_id
+    self.post_id=Post.maximum(:post_id)+1 if self.active && self.post_id.blank?
   end
 end
